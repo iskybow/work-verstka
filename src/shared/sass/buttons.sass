@@ -1,1 +1,32 @@
 @import "imports"
+
+.btn
+  &-card
+    $py: 6px
+    $px: 15px
+    display: inline-block
+    padding: $py $px
+    font-weight: 500
+    font-size: 11px
+    color: white
+    text-decoration: none
+    letter-spacing: 0.43px
+    background-color: transparent
+    border: none
+    border-radius: 4px
+    cursor: pointer
+    transition: $transition
+    &-small
+      padding: 3px 10px
+  &-gray
+    color: #ffffff
+    background-color: $gray
+    &:hover
+      color: #ffffff
+      background-color: darken($gray, 20)
+  &-red
+    color: #ffffff
+    background-color: $red
+    &:hover
+      color: #ffffff
+      background-color: darken($red, 20)

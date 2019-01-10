@@ -1,3 +1,5 @@
+'use strict';
+
 // if (document.querySelector('.overlay')) {
 //   var overlay = document.querySelectorAll('.overlay');
 //   for (let i = 0; i < overlay.length; i++) {
@@ -67,3 +69,4 @@ if ($('.home__slider').length > 0) {
     slidesToShow: 2
   });
 }
+//# sourceMappingURL=script.js.map

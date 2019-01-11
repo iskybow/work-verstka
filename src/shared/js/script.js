@@ -67,3 +67,9 @@ if ($('.home__slider').length > 0) {
     slidesToShow: 2
   });
 }
+
+if ($('.home__form-select-js').length > 0) {
+  $('.home__form-select-js').select2({
+    placeholder: "Вакансии"
+  });
+}

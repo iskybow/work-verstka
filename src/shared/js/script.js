@@ -64,7 +64,9 @@ if ($('.home__slider').length > 0) {
     verticalSwiping: true,
     vertical: true,
     arrows: false,
-    slidesToShow: 2
+    slidesToShow: 2,
+    autoplay: true,
+    autoplaySpeed: 3500,
   });
 }
 

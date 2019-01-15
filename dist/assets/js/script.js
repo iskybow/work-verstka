@@ -68,7 +68,7 @@ if ($('.home__slider').length > 0) {
     arrows: false,
     slidesToShow: 2,
     autoplay: true,
-    autoplaySpeed: 3500
+    autoplaySpeed: 2000
   });
 }
 

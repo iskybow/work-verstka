@@ -1,4 +1,69 @@
 @import "../../shared/sass/imports"
 
+.header-wrap
+  position: relative
+  background: #243b9b
+  @media (max-width: 993px)
+    overflow: hidden
+
+  &__dots
+    position: absolute
+    bottom: -35px
+    right: 60px
+    z-index: 1
+    @media (max-width: 993px)
+      display: none
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    display: block
+    background: url("../images/bg_header_vacancies.png") no-repeat
+    background-size: cover
+
+  &__emblem
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 250px
+    height: auto
+    @media (max-width: 1300px)
+      width: 150px
+    @media (max-width: 993px)
+      right: -40px
+
 .header
-  &-wrap
+  position: relative
+
+  & .home__main-top
+    height: auto
+    background: none
+
+    &:before
+      display: none
+
+  & .home__main-header
+    justify-content: flex-end
+    @media (max-width: 993px)
+      justify-content: center
+
+  & .home__main-content
+    margin: 100px 0 50px
+
+  & .home__nav
+    width: auto
+    @media (max-width: 993px)
+      width: 100%
+
+  & .home__form
+    width: 540px
+    margin-bottom: 0
+    @media (max-width: 1200px)
+      width: 50%
+    @media (max-width: 993px)
+      width: 100%
+      margin-bottom: 20px

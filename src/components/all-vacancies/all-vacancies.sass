@@ -1,0 +1,376 @@
+@import "../../shared/sass/imports"
+
+.all-vacancies
+  position: relative
+  background-color: #f8f8f8
+
+  &__dots2
+    position: absolute
+    bottom: 0
+    left: 70px
+    @media (max-width: 769px)
+      display: none
+
+  &__circle
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 200px
+    height: 200px
+    background-color: #dd3d34
+    border-radius: 0 100% 0 0 / 100% 100% 0 0
+    z-index: 2
+    @media (max-width: 769px)
+      width: 100px
+      height: 100px
+
+.v-content-top
+  display: flex
+  align-items: center
+
+.vacancies-days
+  display: flex
+  align-items: center
+  margin: 20px 95px
+
+  &__text
+    margin-right: 5px
+    font-weight: 700
+
+  & .select2-container--default .select2-selection--single
+    font-weight: 700
+    background: transparent
+    border: none
+
+  & .select2,
+  .select2-selection__rendered,
+  .select2-container .select2-selection--single
+    height: 100%
+
+  & .select2-container--default .select2-selection--single .select2-selection__arrow
+    top: 0
+    height: 100%
+
+  & .select2-container--default .select2-selection--single
+    border: none
+
+  & .select2-container .select2-selection--single .select2-selection__rendered
+    padding-left: 0
+    padding-right: 0
+    color: #000000
+
+  & .select2-container--default .select2-selection--single .select2-selection__placeholder
+    color: $main
+
+  & .select2-container--default .select2-selection--single .select2-selection__arrow b
+    top: 45%
+    margin-left: 0
+    border-width: 7px 5px 0 5px
+    border-radius: 3px
+
+    &:after
+      position: absolute
+      top: -7px
+      left: -3px
+      content: ''
+      border-color: #fff transparent transparent transparent
+      border-style: solid
+      border-width: 5px 3px 0 3px
+
+  & .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+    top: 46%
+    transform: rotate(180deg)
+    border-color: #888 transparent transparent transparent
+
+.v-content-bottom
+  display: flex
+  align-items: flex-start
+  width: 100%
+  margin-bottom: 100px
+
+  &__left
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 270px
+    padding-top: 40px
+
+  &__center
+    display: flex
+    flex-direction: column
+
+    & .single-card
+      width: 650px
+      @media (max-width: 1300px)
+        width: 630px
+
+      &__info-second
+        position: relative
+
+        & a
+          margin-right: 90px
+
+        &__image
+          position: absolute
+          bottom: 5px
+          right: 0
+          width: auto
+          max-width: 66px
+          max-height: 50px
+          min-height: 50px
+
+      &__price
+        margin: 15px 0
+        font-weight: 800
+        font-size: 17px
+        color: #0d1566
+
+      &__info
+
+        &__soc
+          display: flex
+          align-items: center
+
+          & span
+            margin-right: 20px
+            font-weight: 500
+            color: #000104
+
+          & a
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 18px
+            height: 18px
+            margin-right: 10px
+            border-radius: 50%
+
+            & img
+              width: 11px
+              height: auto
+
+      & .btn-card
+        position: relative
+
+        &:before
+          position: absolute
+          top: 0
+          left: -10px
+          content: ''
+          display: block
+          width: 1px
+          height: 24px
+          background-color: #ffe1df
+
+  &__right
+    display: flex
+    flex-direction: column
+
+.vk-bg
+  background-color: #457ba1
+
+.ok-bg
+  background-color: #ff6d00
+
+.fb-bg
+  background-color: #125199
+
+.vr-card-head
+  background-color: #ffffff
+  border: 1px solid #e2e3e7
+  border-radius: 2px
+
+  & > img
+    width: 100%
+    height: auto
+
+  &__bottom
+    display: flex
+    align-items: center
+    padding: 5px 10px
+
+    & p
+      margin: 0 0 0 8px
+      font-weight: 800
+      font-size: 12px
+      line-height: 1
+
+    & span
+      margin-left: auto
+      color: #c6ceda
+
+.vr-text
+  margin-top: 8px
+  padding: 10px
+  background-color: #ffffff
+
+  & p
+    margin: 0
+    font-weight: 700
+    font-size: 10px
+
+.vr-card
+  width: 275px
+  margin-top: 10px
+  padding: 10px 0
+  background-color: #ffffff
+  border: 1px solid #e2e3e7
+  border-radius: 2px
+
+.vr-card-block
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 15px 10px
+  font-size: 10px
+  border-top: 1px solid #eef0f2
+  border-bottom: 1px solid #eef0f2
+
+  &:before
+    position: absolute
+    top: 0
+    left: 10px
+    content: ''
+    width: 40px
+    height: 1px
+    background-color: #6e86a9
+
+  &__head
+    display: flex
+    align-items: center
+
+    &__image
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 25px
+      height: 25px
+      margin-right: 10px
+      border-radius: 50%
+      overflow: hidden
+
+      & img
+        object-fit: cover
+
+    &__name
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+
+      & p
+        margin: 0
+        color: #538cbd
+
+      & span
+        color: #c6ceda
+
+    & > span
+      display: flex
+      align-items: flex-start
+      height: 25px
+      margin-left: auto
+      color: #c6ceda
+
+.checkbox input
+  position: absolute
+  z-index: -1
+  opacity: 0
+  margin: 10px 0 0 20px
+
+.checkbox__text
+  position: relative
+  margin: 10px 0 0
+  padding: 0 0 0 22px
+  font-weight: 500
+  font-size: 14px
+  cursor: pointer
+
+.checkbox__text:before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 12px
+  height: 12px
+  border: 1px solid #e2e2e2
+  background-color: #f1f1f1
+  transition: .2s
+
+.checkbox__text:after
+  content: ''
+  position: absolute
+  top: 2px
+  left: 2.2px
+  width: 8px
+  height: 8px
+  background: url("../images/tick.svg") no-repeat 50% 50%
+  background-size: contain
+  opacity: 0
+  transition: .2s
+
+.checkbox input:checked + .checkbox__text:before
+  background: #5fa7f1
+
+.checkbox input:checked + .checkbox__text
+  font-weight: 700
+
+.checkbox input:checked + .checkbox__text:after
+  opacity: 1
+  transition: .2s
+
+.vl-block
+  display: flex
+  flex-direction: column
+  width: 270px
+  margin-top: 20px
+  padding-bottom: 15px
+  border-bottom: 1px dotted #b8b8b8
+
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+
+    & p
+      margin: 0
+      font-weight: 700
+      font-size: 13px
+      text-transform: uppercase
+      color: #060c3e
+
+    & span
+      margin-right: 20px
+      padding: 0
+      font-size: 25px
+      color: #5fa7f1
+      background: none
+      border: none
+      outline: none
+      cursor: pointer
+
+  &__inputs
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+
+    & input
+      width: 48%
+      padding: 13px 25px
+      font-weight: 400
+      font-size: 14px
+      border: 1px solid #e2e2e2
+      background-color: #f9f9f9
+
+.btn-active
+  display: none
+  transition: all ease 1s
+
+.vl-btn
+  width: 90%
+  margin-top: 5px
+  margin-left: 5px
+  padding: 14px
+
+.no-border
+  border: none

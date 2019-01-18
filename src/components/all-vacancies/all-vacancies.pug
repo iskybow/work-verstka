@@ -1,0 +1,191 @@
+mixin all-vacancies()
+  +b('section').all-vacancies
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots2
+    +e.circle
+    +e.content
+      +b.container
+        +b.v-content-top
+          +b.home__aside-header
+            +b.logo
+              +e.img
+                +e('img').main(src='assets/images/logo.png' alt='')
+                +e('img').info(src='assets/images/ico-i.png' alt='')
+              +e('span').text Актуальных вакансий сейчас
+          +b.vacancies-days
+            +e('p').text Все вакансии Донецка за
+            +b('select').home__form-select-js
+              +e('option') 1 день
+              +e('option') 5 дней
+              +e('option') 10 дней
+              +e('option') 30 дней
+        +b.v-content-bottom
+          +e.left.sidebar#sidebar
+            +b.sidebar-inner
+              +b.vl-block
+                +e.head.jsOpenCheck
+                  +e('p') Требуемый опыт
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.check.jsCheckBlock
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Formal
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Boots
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Plimsolls / Espadrilles
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Loafers / Brogues
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Flip Flops
+              +b.vl-block
+                +e.head.jsOpenCheck
+                  +e('p') Категория
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.check.jsCheckBlock
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Black
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Brawn
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Blue
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Grey
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Khaki
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Navy
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Orange
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Purple
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Red
+              +b.vl-block
+                +e.head.jsOpenCheck
+                  +e('p') Вид занятости
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.check.jsCheckBlock
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Formal
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Boots
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Plimsolls / Espadrilles
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Loafers / Brogues
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Flip Flops
+              +b.vl-block.no-border
+                +e.head.jsOpenCheck
+                  +e('p') Зарплата
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.inputs.jsCheckBlock
+                  +e('input')(type='text')
+                  +e('input')(type='text')
+              +b('button').vl-btn.btn-card.btn-red Применить
+          +e.center
+            - for (var i = 0; i < 12; i++)
+              +b.single-card
+                +e.tr
+                div
+                  a.btn-card.btn-card-small.btn-gray(href='#') Мода и стиль
+                +e('h3').title.mt5.mb0 Рюкзак из натуральной крокодильей кожи ...
+                +e.info-second
+                  span.mr10 Добавлено: 19 марта 2018, 17:15
+                  +e.view
+                    +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
+                    span 255
+                  a.d-flex.align-items-center.ml-auto.mt5.mb5(href='#')
+                    +e('img').icon(src='assets/images/arr-place.png' alt='')
+                    span.ml5 Санкт-Петербург
+                  +e('img')(src='assets/images/vacancies_logo.png' alt='').info-second__image
+                +e('span').price 260-400 EUR
+                +e.info
+                  p Форму держит, на змейке внутри, носится как сумкой так и рюкзаком
+                  p Цвет: чёрная
+                .d-flex.flex-wrap.align-items-center.mt-auto.justify-content-between
+                  +e.info__soc
+                    +e('span') Написать соискателю в сетях
+                    +b('a')(href='#').vk-bg
+                      +e('img')(src='assets/images/vk.svg' alt='')
+                    +b('a')(href='#').ok-bg
+                      +e('img')(src='assets/images/ok.svg' alt='')
+                    +b('a')(href='#').fb-bg
+                      +e('img')(src='assets/images/fb.svg' alt='')
+                  a(href='single-vacancy.html').btn-card.btn-red.mt5.mb5.ml15 Посмотреть полностью
+          +e.right(style='display: none')
+            +b.vr-card-head
+              +e('img')(src='assets/images/vacancies__right_image.png' alt='')
+              +e.bottom
+                +e('img')(src='assets/images/vacancies__right_image2.png' alt='')
+                +e('p') Работа донецк
+                +e('span') ...
+            +b.vr-text
+              +e('p') Актуальные вакансии в нашей группе
+            +b.vr-card
+              +b.vr-card-block
+                +e.head
+                  +e.head__image
+                    +e('img')(src='assets/images/vacancies__photo.png' alt='')
+                  +e.head__name
+                    +e('p') Наталья Лит
+                    +e('span') две минуты назад
+                  +e('span') ...
+                +e('p') Срочно!!!<br>
+                  | Ищу работу (в свободное от учебы время с 16:00(15:00) до 20:00 или же полный раюочий день по выходным)<br>
+                  | 16 лет<br>
+                  | Вредных превычек нет<br>
+                  | Есть опыт работы с детьми<br>
+                  | Обучаюсь в Педагогическом институте<br>
+            +b.vr-card
+              +b.vr-card-block
+                +e.head
+                  +e.head__image
+                    +e('img')(src='assets/images/vacancies__photo.png' alt='')
+                  +e.head__name
+                    +e('p') Наталья Лит
+                    +e('span') две минуты назад
+                  +e('span') ...
+                +e('p') Срочно!!!<br>
+                  | Ищу работу (в свободное от учебы время с 16:00(15:00) до 20:00 или же полный раюочий день по выходным)<br>
+                  | 16 лет<br>
+                  | Вредных превычек нет<br>
+                  | Есть опыт работы с детьми<br>
+                  | Обучаюсь в Педагогическом институте<br>
+            +b.vr-card
+              +b.vr-card-block
+                +e.head
+                  +e.head__image
+                    +e('img')(src='assets/images/vacancies__photo.png' alt='')
+                  +e.head__name
+                    +e('p') Наталья Лит
+                    +e('span') две минуты назад
+                  +e('span') ...
+                +e('p') Срочно!!!<br>
+                  | Ищу работу (в свободное от учебы время с 16:00(15:00) до 20:00 или же полный раюочий день по выходным)<br>
+                  | 16 лет<br>
+                  | Вредных превычек нет<br>
+                  | Есть опыт работы с детьми<br>
+                  | Обучаюсь в Педагогическом институте<br>

@@ -77,4 +77,38 @@ if ($('.home__form-select-js').length > 0) {
     placeholder: "Вакансии"
   });
 }
+
+$(document).ready(function () {
+  // $('.jsOpenCheck').next().hide();
+  $('.jsOpenCheck').click(function () {
+    if ($(this).hasClass("open-services-mob")) {
+      $(this).removeClass('open-services-mob').next().slideDown();
+      $(this).find('.jsBtnPlus').toggleClass('btn-active');
+      $(this).find('.jsBtnMinus').toggleClass('btn-active');
+    } else {
+      // $('.jsOpenCheck.open-services-mob').not(this).removeClass('open-services-mob').next().slideUp();
+      $(this).addClass(' open-services-mob').next().slideUp();
+      $(this).find('.jsBtnPlus').toggleClass('btn-active');
+      $(this).find('.jsBtnMinus').toggleClass('btn-active');
+    }
+  });
+
+  if ($('#sidebar').length > 0) {
+    var stickySidebar = new StickySidebar('#sidebar', {
+      topSpacing: 0,
+      bottomSpacing: 20,
+      containerSelector: '.v-content-bottom',
+      innerWrapperSelector: '.sidebar-inner'
+    });
+  }
+
+  if ($('#sidebar-single').length > 0 && window.innerWidth > 993) {
+    var _stickySidebar = new StickySidebar('#sidebar-single', {
+      topSpacing: 20,
+      bottomSpacing: 20,
+      containerSelector: '.single-block',
+      innerWrapperSelector: '.sidebar-inner'
+    });
+  }
+});
 //# sourceMappingURL=script.js.map

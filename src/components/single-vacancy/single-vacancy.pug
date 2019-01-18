@@ -1,0 +1,77 @@
+mixin single-vacancy()
+  +b('section').single-vacancy
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots2
+    +e.circle
+    +b.container
+      +b('p').result-search Результаты поиска · Вакансии  в Донецке
+        +e('span') Менеджер по холодным звонкам
+      +b.single-block
+        +e.left
+          +e.left__first
+            +b('a')(href='#').btn-card.btn-card-small.btn-gray Мода и стиль
+            +e('span') Добавлено:<br> 19 марта 2018, 17:15
+            +e.left__first__view
+              +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
+              span 255
+            +e('a')(href='#').left__first__city.d-flex.align-items-center.ml-auto.mt5.mb5
+              +e('img').icon(src='assets/images/arr-place.png' alt='')
+              span.ml5 Санкт-Петербург
+          +e('h3').left__head Менеджер по продажам (холодные звонки)
+          +e.left__price
+            +e('span') 8000 руб.
+            +e.left__price__soc
+              +e('span') Написать соискателю в сетях
+              +b('a')(href='#').vk-bg
+                +e('img')(src='assets/images/vk.svg' alt='')
+              +b('a')(href='#').ok-bg
+                +e('img')(src='assets/images/ok.svg' alt='')
+              +b('a')(href='#').fb-bg
+                +e('img')(src='assets/images/fb.svg' alt='')
+          +e.left__employment
+            +e('h3').left__employment__head Вид занятости:
+            +e('p').left__employment__text Полная занятость
+          +e.left__description
+            +e('h3').left__description__head Описание вакансии
+            +e('p').left__description__text Bernas Company приглашает целеустремленных и активных людей на должность менеджера по продажам
+            +e('p').left__description__text Занимаемся продажей рекламных мест в поисковых системах
+            +e('p').left__description__text Яндекс и Гугл. Наш сайт: ppp24.ru
+          +e.left__requirements
+            +e('h3').left__requirements__head Требования:
+            +e('p').left__requirements__text - Возраст от 22 - 25 лет.
+            +e('p').left__requirements__text - Грамотная речь, четкая дикция.
+            +e('p').left__requirements__text - Знание ПК, Интернет, почта.
+            +e('p').left__requirements__text - Приветствуется опыт работы в телефонных продажах.
+            +e('p').left__requirements__text - Желание активно работать и хорошо зарабатывать.
+            +e('p').left__requirements__text - Желание развиваться в профессиональном плане.
+          +e.left__duties
+            +e('h3').left__duties__head Обязаности
+            +e('p').left__duties__text Поиск клиентов в интернете и добавление их в свою базу.
+            +e('p').left__duties__text Исходящие звонки клиентам (холодные звонки, IP телефония)
+            +e('p').left__duties__text Работа по скрипту (Знакомство-Презентация-Заключение договора-Оплата)
+            +e('p').left__duties__text Соблюдение стандартов компании — за это выплачивается дополнительный бонус.
+          +e.left__conditions
+            +e('h3').left__conditions__head Условия работы:
+            +e('p').left__conditions__text Работа в офисе (офис в районе АС Центр — удобное расположение).
+            +e('p').left__conditions__text Заработная плата — ставка от 11 000 рублей до 40 000 руб. Ставка зависит от объема продаж.
+            +e('p').left__conditions__text Выплата дохода — 2 раза в месяц.
+            +e('p').left__conditions__text Предусмотрена 13-я зарплата.
+            +e('p').left__conditions__text График работы: пн-пт, с 08:00—16:00, сб-вс выходной.
+            +e('p').left__conditions__text Дружный молодой коллектив.
+        +e.right.sidebar-single#sidebar-single
+          +b.sidebar-inner
+            +b.sr-block
+              +e.image
+                +e('img')(src='assets/images/vacancies_logo.png' alt='')
+              +e.text
+                +e('h3').text__company Компания:
+                +e('p').text__c-name Bernas Company
+                +e('p').text__c-name Маркетинг, реклама
+                +e('h3').text__contact Контактное лицо:
+                +e('p').text__cont-name Юлия
+                +e('h3').text__phone Телефон:
+                +e('a')(href='tel:0508798669').text__p-num 050-879-86-69
+                +e('a')(href='tel:0713406501').text__p-num 071-340-65-01
+            +b.sr-btn
+              +e('button').btn.btn.btn-red Отправить резюме
+              +e('p').text Вакансия опубликована
+              +e('p').text 16 января 2019 в Донецке

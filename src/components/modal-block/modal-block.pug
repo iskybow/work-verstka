@@ -1,0 +1,33 @@
+mixin modal-block()
+  +b.modal-block.jsModal
+    +b.modal-overlay.jsModalClose
+    +b.modal-position
+      +b.modal-close.jsModalClose
+        +e('span')
+        +e('span')
+      +b.modal-style.modal-login.jsModalLogin
+        +e('h2') Вход
+        +b('form').jsModalLoginForm
+          +b('input')(type='email' name='email' placeholder='Электронная почта').jsMail
+          +b('input')(type='password' name='pass' placeholder='Пароль').jsPass
+          +b('button')(type='submit' disabled).jsBtnLogin.jsBtn Войти
+        +e.text
+          +e('span') Забыли пароль?
+          +b('button').jsRegForm Зарегитрироваться
+      +b.modal-style.modal-reg.jsModalReg
+        +e('h2') Регистрация
+        +b('form').jsModalRegForm
+          +b('input')(type='text' name='name' placeholder='Имя').jsName
+          +b('input')(type='text' name='surname' placeholder='Фамилия').jsSurname
+          +b('input')(type='email' name='email' placeholder='Электронная почта').jsMail
+          +b('input')(type='password' name='pass' placeholder='Пароль').jsPass
+          +b('button')(type='submit' disabled).jsBtnReg.jsBtn Зарегистрироваться
+        +e.text
+          +e('span') Есть учетная запись?
+          +b('button').jsLoginForm Войти
+      +b.modal-style.modal-error.jsModalError
+        +e('h2') Ошибка ввода
+        +e.circle
+          +e.circle__center
+            +e('img')(src='assets/images/checked.svg' alt='')
+        +e('span').error-text Вы ввели не верные данные вернитесь и заполните форму верное

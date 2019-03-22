@@ -1,32 +1,32 @@
 mixin header()
-  +b('header').header-wrap
-    +e('img')(src='assets/images/dots__small.png' alt='').dots
+  +b('header').header-wrap.jsHeaderIndex
+    //+e('img')(src='assets/images/dots__small.png' alt='').dots
     +e('img')(src='assets/images/img2.png' alt='').emblem
     .container
       +b.header
-        +b.container
-          +b.home__main-top
-            +e.main-header
-              +e('nav').nav
-                - for (var i = 0; i < 3; i++)
-                  +e('a').nav-item(href='#') Меню пункт
-              +e.main-email.d-flex.align-items-center
-                +e('span').main-ico @
-                a(href='mailto:info@vendoram.ru') info@vendoram.ru
-              .d-flex.align-items-center
-                +e('i').main-ico.fa.fa-phone
-                .d-flex.flex-column
-                  a(href='tel:88003553505') +8 800 355-35-05
-                  +e('a').callback(href='#') Заказать обратный звонок
-            +e.main-content
-              +e('form').form
-                +e('input').form-input(placeholder='Я ищу...')
-                +e.form-select
-                  +e('select').form-select-js
-                    option
-                    - for (var i = 1; i < 4; i++)
-                      option= `Пункт ${i}`
-                +e('button').search.btn-red(type='submit')
-                  i.fa.fa-search
-              a.btn.btn-red.mr20(href='#') разместить резюме
-              a.btn.btn-red(href='all-vacancies.html') Найти вакансии
+        +b.home__main-top
+          +e.main-header
+            +e('nav').nav
+              +e('a').nav-item(href='index.html') Главная
+              +e('a').nav-item(href='resume.html') Резюме
+              +e('button').nav-item.jsLogin Вход
+            +e.main-email.d-flex.align-items-center
+              +e('span').main-ico @
+              a(href='mailto:info@vendoram.ru') info@vendoram.ru
+            .d-flex.align-items-center
+              +e('i').main-ico.fa.fa-phone
+              .d-flex.flex-column
+                a(href='tel:88003553505') +8 800 355-35-05
+                +e('a').callback(href='#') Заказать обратный звонок
+          +e.main-content
+            +e('form').form
+              +e('input').form-input(placeholder='Я ищу...')
+              +e.form-select
+                +e('select').form-select-js
+                  option
+                  - for (var i = 1; i < 4; i++)
+                    option= `Пункт ${i}`
+              +e('button').search.btn-red(type='submit')
+                i.fa.fa-search
+            a.btn.btn-red.mr20(href='#') разместить резюме
+            a.btn.btn-red(href='all-vacancies.html') Найти вакансии

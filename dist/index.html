@@ -146,7 +146,9 @@
           </div>
           <div class="home__main-top">
             <div class="home__main-header">
-              <nav class="home__nav"><a class="home__nav-item" href="#">Меню пункт</a><a class="home__nav-item" href="#">Меню пункт</a><a class="home__nav-item" href="#">Меню пункт</a>
+              <nav class="home__nav"><a class="home__nav-item" href="index.html">Главная</a><a class="home__nav-item" href="resume.html">Резюме</a>
+                <button class="home__nav-item jsLogin">Вход
+                </button>
               </nav>
               <div class="home__main-email d-flex align-items-center"><span class="home__main-ico">@</span><a href="mailto:info@vendoram.ru">info@vendoram.ru</a>
               </div>
@@ -184,6 +186,46 @@
         <div class="home__circle">
         </div>
       </section>
+      <div class="modal-block jsModal">
+        <div class="modal-overlay jsModalClose">
+        </div>
+        <div class="modal-position">
+          <div class="modal-close jsModalClose"><span></span><span></span>
+          </div>
+          <div class="modal-style modal-login jsModalLogin">
+            <h2>Вход
+            </h2>
+            <form class="jsModalLoginForm"><input class="jsMail" type="email" name="email" placeholder="Электронная почта"/><input class="jsPass" type="password" name="pass" placeholder="Пароль"/>
+              <button class="jsBtnLogin jsBtn" type="submit" disabled="disabled">Войти
+              </button>
+            </form>
+            <div class="modal-style__text"><span>Забыли пароль?</span>
+              <button class="jsRegForm">Зарегитрироваться
+              </button>
+            </div>
+          </div>
+          <div class="modal-style modal-reg jsModalReg">
+            <h2>Регистрация
+            </h2>
+            <form class="jsModalRegForm"><input class="jsName" type="text" name="name" placeholder="Имя"/><input class="jsSurname" type="text" name="surname" placeholder="Фамилия"/><input class="jsMail" type="email" name="email" placeholder="Электронная почта"/><input class="jsPass" type="password" name="pass" placeholder="Пароль"/>
+              <button class="jsBtnReg jsBtn" type="submit" disabled="disabled">Зарегистрироваться
+              </button>
+            </form>
+            <div class="modal-style__text"><span>Есть учетная запись?</span>
+              <button class="jsLoginForm">Войти
+              </button>
+            </div>
+          </div>
+          <div class="modal-style modal-error jsModalError">
+            <h2>Ошибка ввода
+            </h2>
+            <div class="modal-style__circle">
+              <div class="modal-style__circle__center"><img src="assets/images/checked.svg" alt="" role="presentation"/>
+              </div>
+            </div><span class="modal-style__error-text">Вы ввели не верные данные вернитесь и заполните форму верное</span>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="assets/libs/jquery-3.3.1.min.js"></script>
     <script src="assets/libs/jquery.sticky-kit.js"></script>

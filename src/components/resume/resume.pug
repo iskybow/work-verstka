@@ -1,0 +1,329 @@
+mixin resume()
+  +b('section').resume
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots2
+    +e.circle
+    .container.container-for-sidebar
+      +e.left
+        +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
+          +e('img')(src='assets/images/add-contact.svg' alt='')
+        +b.resume-results
+          +b('ul').breadcrumbs
+            +e('li')
+              +e('a')(href='#') К результатам поиска
+            +e('li')
+              +e('a')(href='#') Резюме  в Горловке
+            +e('li')
+              +e('a')(href='#') Механик
+          +e.date
+            +e('p') Резюме от
+            +e('span') 6 марта 2019
+        +b.resume-top
+          +e('img')(src='assets/images/resume_image_1.png' alt='').left
+          +e.right
+            +e.header
+              +e('button').download
+                +e('img')(src='assets/images/resume_download.png' alt='')
+                +e('span') Скачать<br> резюме
+              +e('button').save Сохранить в отклики
+              +e('p').status.vr-head Онлайн
+            +e('h3').head Главный механик, помощник руководителя
+            +e('span').price 260-400 EUR
+            +e('table').text
+              +e('tbody')
+                +e('tr')
+                  +e('th') Занятость:
+                  +e('td') частичная занятость, проектная работа, полная занятость
+                +e('tr')
+                  +e('th') Возраст:
+                  +e('td') 38 лет
+                +e('tr')
+                  +e('th') Город:
+                  +e('td') Горловка
+        +b.resume-block.single-block-slider
+          +b.resume-description
+            +e.item
+              +e.main-head
+                +e('h4').title-main Опыт работы
+                +e('span').experience 6 лет 9 месяцев
+              +e('h4').title-bold Механик участка филиала в Туркменистане
+              +e('p').text с 07.2015 по 12.2016 (1 год 5 месяцев)
+              +e('p').text Дорожное строительство"Альтком", Туркменабад (Дорожное строительство)
+              +e('h4').title-bold Главный инженер
+              +e('p').text с 04.2012 по 07.2015 (3 года 3 месяца)
+              +e('p').text ГП" Артемуголь", Горловка (Мат-но тех.снабж. и вспомогательное пр-во(автобаза(самосвалы, краны,
+                | вышки, бульдозера, экскаваторы), строй уч-ок, лесные склады с переработкой сырья, РММ, тушение профилактика териконов и рекультив. земель)
+              +e('h4').title-bold Начальник
+              +e('p').text с 07.2011 по 04.2012 (9 месяцев)
+              +e('p').text ГП" Артемуголь", Горловка (Ремонтно строительный участок)
+            +e.item
+              +e('h4').title-main Образование
+              +e('h4').title-bold Горловский жилищно-комунальный техникум
+              +e('p').text Горловка <br>Среднее специальное, <br>с 09.1995 по 03.1999 (3 года 6 месяцев)
+            +e.item
+              +e('h4').title-main Профессиональные и другие навык
+              +e('h4').title-bold Навыки работы с компьютером
+              +e('p').text Отличное знаение и владение 1С 8, 1 С ЗУП, Программы Клиент- банк, MEDoc,MS Office, e-mail Востановление данных после двух вирусов.
+              +e('h4').title-bold_mb Relationship building, Goal setting, Business communication
+              +e('p').text_mb (15 лет опыта)
+              +e('p').text Свободно, использую в настоящее время.
+              +e('h4').title-bold_mb International contracts, International logistics
+              +e('p').text_mb (15 лет опыта)
+              +e('p').text Свободно, использую в настоящее время.
+            +e.item
+              +e('h4').title-main Дополнительная информация
+              +e('p').text Здоровый образ жизни, спорт, самообучение, участие в обучающих программах и тренингах, основной приоритет
+                | в трудовой деятельности - увлеченность работой приносящей результат и самореализация. Готовность к проектам высокого уровня сложности .
+                | Рассматриваю предложения с оплатой по конкретным результатам работы. Возможность использования личного авто.
+          +b.resume-info.jsOpenContacts#sidebar-single
+            .single-vacancy-overlay.jsHideContacts
+            .sidebar-inner
+              +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts
+                +e('img')(src='assets/images/add-contact.svg' alt='')
+              +e.head
+                +e('h4') Контактная информация
+                +e('p') Телефон:
+                +e('a')(href='tel:0508798669') 050-879-86-69
+                +e('a')(href='tel:0713406501') 071-340-65-01
+                +e('p') Почта:
+                +e('a')(href='mailto:ansa@mail.ru') ansa@mail.ru
+              +e.soc
+                +e('p') Написать соискателю в сетях
+                +b('a')(href='#').vk-bg
+                  +e('img')(src='assets/images/vk.svg' alt='')
+                +b('a')(href='#').ok-bg
+                  +e('img')(src='assets/images/ok.svg' alt='')
+                +b('a')(href='#').fb-bg
+                  +e('img')(src='assets/images/fb.svg' alt='')
+              +e('button').btn написать сообщение
+              +e('a')(href='#').complain Пожаловаться на<br>это резюме
+      +b.soc-sidebar#sidebar-vr
+        .sidebar-inner
+          +b('p').vr-head Прямой эфир
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4
+          +b.vr-card
+            +e.head
+              +e.head-image
+                +e('img')(src='assets/images/vr_card_image.png' alt='')
+              +e.name-time
+                +e('p').name Дмитрий Иванов
+                +e('span').time 2 минуты назад
+            +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+              | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+            +e.bottom
+              +e('span')
+                +e('img')(src='assets/images/like.svg' alt='')
+                | Нравится 96
+              +e('span')
+                +e('img')(src='assets/images/chat.svg' alt='')
+                | Комментировать 5
+              +e('span')
+                +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                | 4

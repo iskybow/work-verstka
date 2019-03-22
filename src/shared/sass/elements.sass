@@ -91,3 +91,136 @@
 
 .select2-results__option
   white-space: nowrap
+
+.soc-sidebar
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 340px
+  min-width: 340px
+  box-sizing: border-box
+  @media (max-width: 1250px)
+    display: none
+
+  & .sidebar-inner
+    width: 340px !important
+    height: 100vh
+    padding: 15px 18px
+    background-color: #ffffff
+    overflow-y: scroll
+    scrollbar-width: none /* Firefox */
+    -ms-overflow-style: none  /* IE 10+ */
+
+    &::-webkit-scrollbar /* WebKit */
+        width: 0px
+
+.vr-head
+  position: relative
+  display: flex
+  align-items: center
+  margin: 0 0 -20px 15px
+  padding-left: 35px
+  font-weight: 700
+  font-size: 17px
+
+  &:before
+    content: ''
+    position: absolute
+    left: 6px
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    display: block
+    background-color: #ef122b
+    animation: keyframes-live_on 7s infinite cubic-bezier(.19,1,.22,1)
+
+  &:after
+    content: ''
+    position: absolute
+    left: 6px
+    width: 7px
+    height: 7px
+    background-color: #ef122b
+    border-radius: 50%
+
+.vr-card
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin-top: 35px
+  padding-top: 10px
+  border-top: 1px solid #f0f0f0
+
+  &:before
+    content: ''
+    position: absolute
+    top: -2px
+    left: 0
+    width: 15px
+    height: 3px
+    background-color: #ffffff
+
+  &__head
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+  &__head-image
+    position: relative
+    margin-right: 11px
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 28px
+      height: 28px
+      background: rgba(0, 0, 0, .25)
+
+  &__name-time
+    display: flex
+    flex-direction: column
+
+  &__name
+    margin: 0
+    font-weight: 700
+    font-size: 12px
+    line-height: 1
+
+  &__time
+    font-size: 10px
+    font-weight: 500
+    color: #5e5555
+
+  &__text
+    margin: 0 0 16px
+    font-size: 12px
+    font-weight: 500
+    color: #0f0000
+
+  &__bottom
+    display: flex
+    align-items: center
+
+    & span
+      display: flex
+      align-items: flex-start
+      margin-right: 13px
+      font-weight: 500
+      font-size: 12px
+      color: #5e8392
+
+      & img
+        width: 12px
+        height: auto
+        margin-right: 6px
+
+@keyframes keyframes-live_on
+  0%
+    transform: scale(1)
+    opacity: .7
+  15%,to
+    transform: scale(3)
+    opacity: 0

@@ -1,0 +1,10 @@
+extends ../components/layout-default/layout-index
+include ../components/header/header
+include ../components/resume/resume
+
+block head
+  - var pageTitle = 'Index Page';
+
+block content
+  +header()
+  +resume()

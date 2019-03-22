@@ -228,8 +228,12 @@
     @media (max-width: 1200px)
       min-width: 250px
     @media (max-width: 993px)
-      min-width: 100%
-      margin: 30px 0 0
+      position: fixed
+      bottom: 15%
+      right: 0
+      margin: 0
+      transition: all ease 1s
+      z-index: -1
 
     & .sidebar-inner
       width: 100% !important
@@ -237,7 +241,10 @@
       @media (max-width: 1200px)
         max-width: 250px
       @media (max-width: 993px)
-        max-width: 100%
+        max-width: 270px
+        z-index: 7
+        transform: translateX(350px)
+        transition: all ease 1s
 
 .sr-block
   display: flex
@@ -248,11 +255,14 @@
     flex-direction: column
     padding: 20px
     width: 100%
-  @media (max-width: 767px)
+  @media (max-width: 993px)
+    align-items: flex-start
     flex-direction: row
-    justify-content: space-around
-  @media (max-width: 376px)
-    flex-direction: column
+  //@media (max-width: 767px)
+  //  flex-direction: row
+  //  justify-content: space-around
+  //@media (max-width: 376px)
+  //  flex-direction: column
 
   &__image
     width: 100px
@@ -260,6 +270,9 @@
     margin-right: 20px
     @media (max-width: 1200px)
       margin: 0 0 10px
+    @media (max-width: 993px)
+      width: 70px
+      margin-right: 15px
 
     & img
       width: 100%
@@ -273,60 +286,67 @@
     @media (max-width: 1200px)
       align-items: center
     @media (max-width: 993px)
-      justify-content: flex-start
-      flex-wrap: wrap
-      width: 100%
-      height: 70px
-    @media (max-width: 767px)
-      width: auto
-      height: auto
-      align-items: flex-start
-    @media (max-width: 376px)
-      align-items: center
+      align-items: stretch
+    //  justify-content: flex-start
+    //  flex-wrap: wrap
+    //  width: 100%
+    //  height: 70px
+    //@media (max-width: 767px)
+    //  width: auto
+    //  height: auto
+    //  align-items: flex-start
+    //@media (max-width: 376px)
+    //  align-items: center
 
     &__company
       margin: 0
       font-weight: 700
-      font-size: 20px
+      font-size: 18px
+      @media (max-width: 993px)
+        font-size: 17px
 
     &__c-name
       margin: 0
       font-weight: 500
       font-size: 16px
+      @media (max-width: 993px)
+        font-size: 14px
 
     &__contact
       margin: 20px 0 0
       font-weight: 700
-      font-size: 20px
+      font-size: 18px
       @media (max-width: 993px)
-        margin-top: 0
-      @media (max-width: 767px)
-        margin-top: 20px
+        font-size: 17px
+      //@media (max-width: 767px)
+      //  margin-top: 20px
 
     &__cont-name
       margin: 0
       font-weight: 500
-      font-size: 18px
+      font-size: 16px
       color: #182c93
       @media (max-width: 993px)
-        margin-bottom: 10px
-      @media (max-width: 767px)
-        margin-bottom: 0
+        font-size: 14px
+      //@media (max-width: 767px)
+      //  margin-bottom: 0
 
     &__phone
       margin: 20px 0 0
       font-weight: 700
-      font-size: 20px
+      font-size: 18px
       @media (max-width: 993px)
-        margin-top: 0
-      @media (max-width: 767px)
-        margin-top: 20px
+        font-size: 17px
+      //@media (max-width: 767px)
+      //  margin-top: 20px
 
     &__p-num
       font-weight: 700
-      font-size: 18px
+      font-size: 16px
       color: #2e347a
       text-decoration: none
+      @media (max-width: 993px)
+        font-size: 14px
 
 .sr-btn
   display: flex
@@ -335,7 +355,9 @@
   width: 100%
   margin-top: 30px
   @media (max-width: 993px)
-    margin-top: 15px
+    margin-top: 0
+    padding-bottom: 20px
+    background-color: #ffffff
 
   &__btn
     margin-bottom: 20px
@@ -346,3 +368,69 @@
     margin: 0
     font-weight: 500
     font-size: 12px
+
+.mobile-contacts
+  position: fixed
+  bottom: 15%
+  right: 0
+  display: none
+  align-items: center
+  justify-content: center
+  width: 45px
+  height: 40px
+  border-radius: 20px 0 0 20px
+  border: none
+  background-image: linear-gradient(to left, #dd3d34 0%, #af2a22 99%, #af2a22 100%)
+  outline: none
+  cursor: pointer
+  z-index: 5
+  @media (max-width: 993px)
+    display: flex
+
+  & img
+    width: 22px
+    height: auto
+
+  &:before
+    position: absolute
+    content: ''
+    top: -8px
+    left: -8px
+    bottom: -8px
+    right: 0
+    border: 1px solid #ffffff
+    border-radius: 28px 0 0 28px
+    opacity: 0.1
+
+.single-vacancy-overlay
+  position: fixed
+  top: 0
+  left: 0
+  display: none
+  width: 100vw
+  height: 100vh
+  background-color: #282828
+  opacity: 0
+  z-index: -1
+  transition: all ease 1s
+  @media (max-width: 993px)
+    display: block
+
+.sidebar-mobile-contacts
+  @media (max-width: 993px)
+    position: absolute
+    top: 20px
+    left: -45px
+
+.active-single-contacts
+  z-index: 6
+
+  & .single-vacancy-overlay
+    opacity: 0.38
+    z-index: 1
+    transition: all ease 1s
+
+  & .sidebar-inner
+    @media (max-width: 993px)
+      transform: translateX(0)
+      transition: all ease 1s

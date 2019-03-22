@@ -1,0 +1,199 @@
+@import "../../shared/sass/imports"
+
+.modal-block
+  display: none
+  z-index: 9
+
+.body-overflow
+  overflow: hidden
+
+.modal-overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: #282828
+  opacity: 0.38
+  z-index: 10
+
+.modal-position
+  position: absolute
+  top: 50%
+  left: 50%
+  background-color: #ffffff
+  box-shadow: 0 0 43px rgba(40, 40, 40, 0.33)
+  border-radius: 10px
+  transform: translate(-50%, -50%)
+  z-index: 11
+
+.modal-close
+  position: absolute
+  top: 20px
+  right: 15px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 15px
+  height: 15px
+  outline: none
+  cursor: pointer
+
+  & span
+    position: absolute
+    width: 15px
+    height: 2px
+    background-color: #acacac
+
+    &:first-child
+      transform: rotate(45deg)
+
+    &:last-child
+      transform: rotate(-45deg)
+
+.modal-style
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 70px 100px 45px
+  @media (max-width: 1200px)
+    padding: 40px
+  @media (max-width: 576px)
+    padding: 30px 10px 10px
+
+  & h2
+    margin-top: 0
+    margin-bottom: 40px
+    font-weight: 700
+    font-size: 42px
+    color: #262626
+    text-align: center
+
+  & form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & input
+      width: 420px
+      margin-bottom: 25px
+      padding: 20px 0 20px 40px
+      font-size: 16px
+      font-weight: 400
+      color: #a8a8a8
+      box-shadow: 0 0 59px rgba(40, 40, 40, 0.05)
+      border-radius: 35px
+      border: 1px solid #e8e8e8
+      background-color: #ffffff
+      @media (max-width: 1200px)
+        width: 350px
+      @media (max-width: 576px)
+        width: 300px
+
+    & button
+      position: relative
+      width: 250px
+      height: 50px
+      margin-top: 20px
+      margin-bottom: 45px
+      font-weight: 700
+      font-size: 17px
+      color: #f7fafb
+      text-transform: uppercase
+      background-color: #ff000c
+      border-radius: 26px
+      border: none
+      box-shadow: -1px 5px 13px rgba(19, 19, 19, 0.34)
+      outline: none
+      cursor: pointer
+
+      &:before
+        content: ''
+        position: absolute
+        top: 5px
+        left: -55px
+        width: 30px
+        height: 30px
+        background: url("../images/arrow.png") no-repeat 50% 50%
+        background-size: contain
+        @media (max-width: 576px)
+          display: none
+
+  &__text
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    & span
+      margin-right: 20px
+      font-weight: 400
+      font-size: 21px
+      color: #010000
+      @media (max-width: 1200px)
+        font-size: 18px
+      @media (max-width: 576px)
+        margin-right: 0
+
+    & button
+      font-weight: 400
+      font-size: 21px
+      text-decoration: underline
+      color: #0d5ecc
+      border: none
+      background: none
+      outline: none
+      cursor: pointer
+      @media (max-width: 1200px)
+        font-size: 18px
+
+  &__circle
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 110px
+    height: 110px
+    margin: 0 auto 40px
+    background-color: rgba(246, 26, 36, .2)
+    border-radius: 50%
+
+    &__center
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 90px
+      height: 90px
+      background-color: rgba(246, 26, 36, .5)
+      border-radius: 50%
+
+      & img
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 70px
+        height: 70px
+        padding: 20px
+        background-color: #ff000c
+        border-radius: 50%
+
+  &__error-text
+    display: block
+    width: 390px
+    font-size: 21px
+    font-weight: 400
+    color: #a8a8a8
+    text-align: center
+
+.modal-login
+  display: none
+  @media (max-height: 480px)
+    height: 100vh
+    overflow: scroll
+
+.modal-reg
+  display: none
+  @media (max-height: 650px)
+    height: 100vh
+    overflow: scroll
+
+.modal-error
+  display: none

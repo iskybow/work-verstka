@@ -5,7 +5,9 @@ mixin single-vacancy()
     +b.container
       +b('p').result-search Результаты поиска · Вакансии  в Донецке
         +e('span') Менеджер по холодным звонкам
-      +b.single-block
+      +b.single-block.single-block-slider
+        +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
+          +e('img')(src='assets/images/add-contact.svg' alt='')
         +e.left
           +e.left__first
             +b('a')(href='#').btn-card.btn-card-small.btn-gray Мода и стиль
@@ -57,8 +59,11 @@ mixin single-vacancy()
             +e('p').left__conditions__text Предусмотрена 13-я зарплата.
             +e('p').left__conditions__text График работы: пн-пт, с 08:00—16:00, сб-вс выходной.
             +e('p').left__conditions__text Дружный молодой коллектив.
-        +e.right.sidebar-single#sidebar-single
+        +e.right.sidebar-single.jsOpenContacts#sidebar-single
+          +b.single-vacancy-overlay.jsHideContacts
           +b.sidebar-inner
+            +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts
+              +e('img')(src='assets/images/add-contact.svg' alt='')
             +b.sr-block
               +e.image
                 +e('img')(src='assets/images/logo_company.svg' alt='')

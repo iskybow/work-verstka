@@ -3,6 +3,7 @@ mixin all-vacancies()
     +e('img')(src='assets/images/bg-dots.png' alt='').dots2
     +e.circle
     +e.content
+      +b('button').filter-btn.jsShowFilter Фильтр
       +b.container
         +b.v-content-top
           +b.home__aside-header
@@ -18,8 +19,12 @@ mixin all-vacancies()
               +e('option') 5 дней
               +e('option') 10 дней
               +e('option') 30 дней
-        +b.v-content-bottom
-          +e.left.sidebar#sidebar
+        +b.v-content-bottom.container-for-sidebar
+          +b.filter-overlay.jsFilterOverlay
+          +e.left.sidebar.jsOpenFilter#sidebar
+            +b.filter-close.jsHideFilter
+              +e('span')
+              +e('span')
             +b.sidebar-inner
               +b.vl-block
                 +e.head.jsOpenCheck
@@ -135,57 +140,234 @@ mixin all-vacancies()
                     +b('a')(href='#').fb-bg
                       +e('img')(src='assets/images/fb.svg' alt='')
                   a(href='single-vacancy.html').btn-card.btn-red.mt5.mb5.ml15 Посмотреть полностью
-          +e.right(style='display: none')
-            +b.vr-card-head
-              +e('img')(src='assets/images/vacancies__right_image.png' alt='')
-              +e.bottom
-                +e('img')(src='assets/images/vacancies__right_image2.png' alt='')
-                +e('p') Работа донецк
-                +e('span') ...
-            +b.vr-text
-              +e('p') Актуальные вакансии в нашей группе
-            +b.vr-card
-              +b.vr-card-block
+          +b.soc-sidebar#sidebar-vr
+            .sidebar-inner
+              +b('p').vr-head Прямой эфир
+              +b.vr-card
                 +e.head
-                  +e.head__image
-                    +e('img')(src='assets/images/vacancies__photo.png' alt='')
-                  +e.head__name
-                    +e('p') Наталья Лит
-                    +e('span') две минуты назад
-                  +e('span') ...
-                +e('p') Срочно!!!<br>
-                  | Ищу работу (в свободное от учебы время с 16:00(15:00) до 20:00 или же полный раюочий день по выходным)<br>
-                  | 16 лет<br>
-                  | Вредных превычек нет<br>
-                  | Есть опыт работы с детьми<br>
-                  | Обучаюсь в Педагогическом институте<br>
-            +b.vr-card
-              +b.vr-card-block
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
                 +e.head
-                  +e.head__image
-                    +e('img')(src='assets/images/vacancies__photo.png' alt='')
-                  +e.head__name
-                    +e('p') Наталья Лит
-                    +e('span') две минуты назад
-                  +e('span') ...
-                +e('p') Срочно!!!<br>
-                  | Ищу работу (в свободное от учебы время с 16:00(15:00) до 20:00 или же полный раюочий день по выходным)<br>
-                  | 16 лет<br>
-                  | Вредных превычек нет<br>
-                  | Есть опыт работы с детьми<br>
-                  | Обучаюсь в Педагогическом институте<br>
-            +b.vr-card
-              +b.vr-card-block
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
                 +e.head
-                  +e.head__image
-                    +e('img')(src='assets/images/vacancies__photo.png' alt='')
-                  +e.head__name
-                    +e('p') Наталья Лит
-                    +e('span') две минуты назад
-                  +e('span') ...
-                +e('p') Срочно!!!<br>
-                  | Ищу работу (в свободное от учебы время с 16:00(15:00) до 20:00 или же полный раюочий день по выходным)<br>
-                  | 16 лет<br>
-                  | Вредных превычек нет<br>
-                  | Есть опыт работы с детьми<br>
-                  | Обучаюсь в Педагогическом институте<br>
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4
+              +b.vr-card
+                +e.head
+                  +e.head-image
+                    +e('img')(src='assets/images/vr_card_image.png' alt='')
+                  +e.name-time
+                    +e('p').name Дмитрий Иванов
+                    +e('span').time 2 минуты назад
+                +e('p').text Ресторану-пивоварне «Beerstown” требуются официанты. Проживание желательно в Будённовском
+                  | или Пролетарском р-не г.Донецка. Все вопросы по телефону: 071-310-69-69
+                +e.bottom
+                  +e('span')
+                    +e('img')(src='assets/images/like.svg' alt='')
+                    | Нравится 96
+                  +e('span')
+                    +e('img')(src='assets/images/chat.svg' alt='')
+                    | Комментировать 5
+                  +e('span')
+                    +e('img')(src='assets/images/speaker-side-view.svg' alt='')
+                    | 4

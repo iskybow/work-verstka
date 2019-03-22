@@ -1,4 +1,5 @@
 include ../../../node_modules/bemto.pug/bemto
+include ../../components/modal-block/modal-block
 
 doctype html
 html(lang='ru')
@@ -18,6 +19,7 @@ html(lang='ru')
   body
     .root
       block content
+      +modal-block()
     script(src='assets/libs/jquery-3.3.1.min.js')
     script(src='assets/libs/jquery.sticky-kit.js')
     script(src='assets/libs/slick/slick.min.js')

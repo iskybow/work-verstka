@@ -67,6 +67,10 @@
     &-header
       display: flex
       align-items: center
+      margin: 20px 95px 20px 0
+      @media (max-width: 998px)
+        flex-direction: column
+        margin: 20px auto
       &-vacancy
         margin-left: auto
         margin-right: 60px
@@ -344,7 +348,7 @@
     border-radius: 20px
     cursor: pointer
   &__nav
-    margin-left: 12%
+    margin-left: 8%
     margin-right: 80px
     @media (max-width: 1350px)
       display: flex

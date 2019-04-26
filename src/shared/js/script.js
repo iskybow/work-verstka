@@ -163,11 +163,6 @@ $(document).ready(function () {
     $('.jsModalLogin').fadeIn();
     $('body').addClass('body-overflow');
   });
-  $('.jsModalClose').click(function () {
-    $('.jsModal').fadeOut();
-    $('.jsBtn').prop('disabled', true);
-    $('body').removeClass('body-overflow');
-  });
   $('.jsRegForm').click(function () {
     $('.jsModalLogin').fadeOut(1);
     $('.jsModalReg').fadeIn();
@@ -175,6 +170,13 @@ $(document).ready(function () {
   $('.jsLoginForm').click(function () {
     $('.jsModalReg').fadeOut(1);
     $('.jsModalLogin').fadeIn();
+  });
+  $('.jsModalClose').click(function () {
+    $('.jsModal').fadeOut();
+    $('.jsModalLogin').fadeOut(1);
+    $('.jsModalReg').fadeOut();
+    $('.jsBtn').prop('disabled', true);
+    $('body').removeClass('body-overflow');
   });
 
   var nameTest = /^([A-Z])(.+)/;
@@ -197,4 +199,7 @@ $(document).ready(function () {
       $('.jsBtnReg').prop('disabled', false)
     }
   });
+
+  $('.jsCitiesSelect').select2();
+
 });

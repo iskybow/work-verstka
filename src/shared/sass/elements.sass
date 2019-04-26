@@ -86,8 +86,8 @@
   img
     +fit-cover
 
-.select2-search--dropdown
-  display: none
+//.select2-search--dropdown
+//  display: none
 
 .select2-results__option
   white-space: nowrap
@@ -224,3 +224,25 @@
   15%,to
     transform: scale(3)
     opacity: 0
+
+.search
+  position: relative
+  display: flex
+  align-items: center
+  margin-left: 100px
+  @media (max-width: 998px)
+    margin: 20px 0 0
+
+  & input
+    width: 300px
+    padding: 7px 40px 7px 10px
+    border: 1px solid #000000
+    border-radius: 15px
+
+  & button
+    position: absolute
+    right: 0
+    border: none
+    border-radius: 15px
+    width: 32px
+    height: 32px

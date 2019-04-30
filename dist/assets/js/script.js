@@ -200,5 +200,19 @@ $(document).ready(function () {
   });
 
   $('.jsCitiesSelect').select2();
+
+  $('.jsOpenMenu').mouseenter(function () {
+    $('.jsShowMenu').fadeIn().css('display', 'flex');
+  });
+
+  // $('.jsShowMenu').mouseleave(function () {
+  //   $('.jsShowMenu').fadeOut();
+  // });
+
+  $('.jsMenu').mouseleave(function (e) {
+    if (!$('.jsShowMenu').is(e.target) || !$('.jsOpenMenu').is(e.target)) {
+      $('.jsShowMenu').fadeOut();
+    }
+  });
 });
 //# sourceMappingURL=script.js.map

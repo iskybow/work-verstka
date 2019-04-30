@@ -246,3 +246,46 @@
     border-radius: 15px
     width: 32px
     height: 32px
+
+
+.btn-logout
+  padding: 3px 15px
+  font-size: 14px
+  font-weight: 800
+  color: #ffffff
+  background: none
+  border: none
+  cursor: pointer
+
+.btn-logout:hover
+  color: #dd3d34
+
+.dropdown
+  position: relative
+
+  & > span
+    padding-bottom: 15px
+
+  &__menu
+    position: absolute
+    top: 150%
+    left: 0
+    display: none
+    flex-direction: column
+    align-items: flex-start
+    width: 175px
+    padding: 10px
+    background-color: rgba(13, 21, 102, .3)
+    border-radius: 10px
+
+    @media (max-width: 675px)
+      right: 0
+      left: auto
+      background-color: rgba(13, 21, 102, 1)
+
+    @media (max-width: 675px)
+      right: 50%
+      transform: translateX(50%)
+
+.dropdown .form-logout
+  margin-top: 10px

@@ -81,7 +81,22 @@ if ($('.home__slider').length > 0) {
 
 if ($('.home__form-select-js').length > 0) {
   $('.home__form-select-js').select2({
-    placeholder: "Вакансии"
+    placeholder: "Вакансии",
+    minimumResultsForSearch: Infinity
+  });
+}
+
+if ($('.jsModalSelectResume').length > 0) {
+  $('.jsModalSelectResume').select2({
+    placeholder: "Выберите резюме",
+    minimumResultsForSearch: Infinity
+  });
+}
+
+if ($('.jsModalSelectVacancy').length > 0) {
+  $('.jsModalSelectVacancy').select2({
+    placeholder: "Выберите вакансию",
+    minimumResultsForSearch: Infinity
   });
 }
 
@@ -171,10 +186,22 @@ $(document).ready(function () {
     $('.jsModalReg').fadeOut(1);
     $('.jsModalLogin').fadeIn();
   });
+  $('.jsSendMessage').click(function () {
+    $('.jsModal').fadeIn();
+    $('.jsModalMessage').fadeIn();
+    $('body').addClass('body-overflow');
+  });
+  $('.jsVacancyModal').click(function () {
+    $('.jsModal').fadeIn();
+    $('.jsModalMessageVacancy').fadeIn();
+    $('body').addClass('body-overflow');
+  });
   $('.jsModalClose').click(function () {
     $('.jsModal').fadeOut();
     $('.jsModalLogin').fadeOut(1);
     $('.jsModalReg').fadeOut();
+    $('.jsModalMessage').fadeOut();
+    $('.jsModalMessageVacancy').fadeOut();
     $('.jsBtn').prop('disabled', true);
     $('body').removeClass('body-overflow');
   });
@@ -200,8 +227,6 @@ $(document).ready(function () {
     }
   });
 
-  $('.jsCitiesSelect').select2();
-
   $('.jsOpenMenu').mouseenter(function () {
     $('.jsShowMenu').fadeIn().css('display', 'flex');
   });
@@ -216,4 +241,25 @@ $(document).ready(function () {
     }
   });
 
+  $('.jsOpenNavMenu').click(function () {
+    $('.jsOpenNavMenu').toggleClass('activeBtn');
+    $('.jsNavMenu').toggleClass('active-nav');
+    if($('.jsNavOverlay').hasClass('active-filter-overlay')) {
+      $('.jsNavOverlay').removeClass('active-filter-overlay').css('display', 'none')
+    } else {
+      $('.jsNavOverlay').addClass('active-filter-overlay').css('display', 'block')
+    }
+
+  });
+
+  $('.jsNavOverlay').click(function () {
+    $('.jsOpenNavMenu').toggleClass('activeBtn');
+    $('.jsNavMenu').toggleClass('active-nav');
+    $('.jsNavOverlay').toggleClass('active-filter-overlay').css('display', 'none')
+  });
+
 });
+
+if($('.jsCitiesSelect').length > 0) {
+  $('.jsCitiesSelect').select2();
+}

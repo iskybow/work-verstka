@@ -19,7 +19,11 @@
           <div class="header">
             <div class="home__main-top">
               <div class="home__main-header">
-                <nav class="home__nav"><a class="home__nav-item" href="index.html">Главная</a><a class="home__nav-item" href="resume.html">Резюме</a><a class="home__nav-item" href="all-resume.html">Поиск резюме</a>
+                <button class="mobile-nav-btn jsOpenNavMenu"><span></span><span></span><span></span>
+                </button>
+                <div class="filter-overlay nav-overlay jsNavOverlay">
+                </div>
+                <nav class="home__nav jsNavMenu"><a class="home__nav-item" href="index.html">Главная</a><a class="home__nav-item" href="resume.html">Резюме</a><a class="home__nav-item" href="all-resume.html">Поиск резюме</a>
                   <!--+e('button').nav-item.jsLogin Вход-->
                   <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User</span>
                     <div class="dropdown__menu jsShowMenu"><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
@@ -191,7 +195,7 @@
                     <p>Написать соискателю в сетях
                     </p><a class="vk-bg" href="#"><img src="assets/images/vk.svg" alt="" role="presentation"/></a><a class="ok-bg" href="#"><img src="assets/images/ok.svg" alt="" role="presentation"/></a><a class="fb-bg" href="#"><img src="assets/images/fb.svg" alt="" role="presentation"/></a><a class="inst-bg" href="#"><img src="assets/images/instagram.svg" alt="" role="presentation"/></a>
                   </div>
-                  <button class="resume-info__btn">написать сообщение
+                  <button class="resume-info__btn jsSendMessage">написать сообщение
                   </button><a class="resume-info__complain" href="#">Пожаловаться на<br>это резюме</a>
                 </div>
               </div>
@@ -422,6 +426,38 @@
               <div class="modal-style__circle__center"><img src="assets/images/checked.svg" alt="" role="presentation"/>
               </div>
             </div><span class="modal-style__error-text">Вы ввели не верные данные вернитесь и заполните форму верное</span>
+          </div>
+          <div class="modal-style modal-send-message jsModalMessage">
+            <h2>Написать нам
+            </h2>
+            <form class="jsModalRegForm">
+              <select class="jsModalSelectResume">
+                <option>1
+                </option>
+                <option>2
+                </option>
+                <option>3
+                </option>
+              </select><textarea class="jsMessage" name="message" rows="5" placeholder="Введите сообщение"></textarea>
+              <button class="jsBtnReg jsBtn" type="submit" disabled="disabled">Отправить
+              </button>
+            </form>
+          </div>
+          <div class="modal-style modal-send-message jsModalMessageVacancy">
+            <h2>Написать нам
+            </h2>
+            <form class="jsModalRegForm">
+              <select class="jsModalSelectVacancy">
+                <option>1
+                </option>
+                <option>2
+                </option>
+                <option>3
+                </option>
+              </select><textarea class="jsMessage" name="message" rows="5" placeholder="Введите сообщение"></textarea>
+              <button class="jsBtnReg jsBtn" type="submit" disabled="disabled">Отправить
+              </button>
+            </form>
           </div>
         </div>
       </div>

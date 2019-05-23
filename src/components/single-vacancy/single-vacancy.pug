@@ -10,7 +10,10 @@ mixin single-vacancy()
           +e('img')(src='assets/images/add-contact.svg' alt='')
         +e.left
           +e.left__first
-            +b('a')(href='#').btn-card.btn-card-small.btn-gray Мода и стиль
+            +b.category-block
+              +b('a')(href='#').btn-card.btn-card-small.btn-gray Администрация, руководство среднего звена
+              +b('a')(href='#').btn-card.btn-card-small.btn-gray Бухгалтерия, аудит
+              +b('a')(href='#').btn-card.btn-card-small.btn-gray Гостинично-ресторанный бизнес, туризм
             +e('span') Добавлено:<br> 19 марта 2018, 17:15
             +e.left__first__view
               +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
@@ -77,6 +80,6 @@ mixin single-vacancy()
                 +e('a')(href='tel:0508798669').text__p-num 050-879-86-69
                 +e('a')(href='tel:0713406501').text__p-num 071-340-65-01
             +b.sr-btn
-              +e('button').btn.btn.btn-red Отправить резюме
+              +e('button').btn.btn.btn-red.jsVacancyModal Отправить резюме
               +e('p').text Вакансия опубликована
               +e('p').text 16 января 2019 в Донецке

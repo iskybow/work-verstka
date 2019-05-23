@@ -19,7 +19,11 @@
           <div class="header">
             <div class="home__main-top">
               <div class="home__main-header">
-                <nav class="home__nav"><a class="home__nav-item" href="index.html">Главная</a><a class="home__nav-item" href="resume.html">Резюме</a><a class="home__nav-item" href="all-resume.html">Поиск резюме</a>
+                <button class="mobile-nav-btn jsOpenNavMenu"><span></span><span></span><span></span>
+                </button>
+                <div class="filter-overlay nav-overlay jsNavOverlay">
+                </div>
+                <nav class="home__nav jsNavMenu"><a class="home__nav-item" href="index.html">Главная</a><a class="home__nav-item" href="resume.html">Резюме</a><a class="home__nav-item" href="all-resume.html">Поиск резюме</a>
                   <!--+e('button').nav-item.jsLogin Вход-->
                   <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User</span>
                     <div class="dropdown__menu jsShowMenu"><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
@@ -61,7 +65,9 @@
             <button class="mobile-contacts jsShowContacts jsShowContactsFlag"><img src="assets/images/add-contact.svg" alt="" role="presentation"/>
             </button>
             <div class="single-block__left">
-              <div class="single-block__left__first"><a class="btn-card btn-card-small btn-gray" href="#">Мода и стиль</a><span>Добавлено:<br> 19 марта 2018, 17:15</span>
+              <div class="single-block__left__first">
+                <div class="category-block"><a class="btn-card btn-card-small btn-gray" href="#">Администрация, руководство среднего звена</a><a class="btn-card btn-card-small btn-gray" href="#">Бухгалтерия, аудит</a><a class="btn-card btn-card-small btn-gray" href="#">Гостинично-ресторанный бизнес, туризм</a>
+                </div><span>Добавлено:<br> 19 марта 2018, 17:15</span>
                 <div class="single-block__left__first__view"><img class="single-block__icon mr5" src="assets/images/icon-eye.png" alt="" role="presentation"/><span>255</span>
                 </div><a class="single-block__left__first__city d-flex align-items-center ml-auto mt5 mb5" href="#"><img class="single-block__icon" src="assets/images/arr-place.png" alt="" role="presentation"/><span class="ml5">Санкт-Петербург</span></a>
               </div>
@@ -157,7 +163,7 @@
                   </div>
                 </div>
                 <div class="sr-btn">
-                  <button class="sr-btn__btn btn btn-red">Отправить резюме
+                  <button class="sr-btn__btn btn btn-red jsVacancyModal">Отправить резюме
                   </button>
                   <p class="sr-btn__text">Вакансия опубликована
                   </p>
@@ -206,6 +212,38 @@
               <div class="modal-style__circle__center"><img src="assets/images/checked.svg" alt="" role="presentation"/>
               </div>
             </div><span class="modal-style__error-text">Вы ввели не верные данные вернитесь и заполните форму верное</span>
+          </div>
+          <div class="modal-style modal-send-message jsModalMessage">
+            <h2>Написать нам
+            </h2>
+            <form class="jsModalRegForm">
+              <select class="jsModalSelectResume">
+                <option>1
+                </option>
+                <option>2
+                </option>
+                <option>3
+                </option>
+              </select><textarea class="jsMessage" name="message" rows="5" placeholder="Введите сообщение"></textarea>
+              <button class="jsBtnReg jsBtn" type="submit" disabled="disabled">Отправить
+              </button>
+            </form>
+          </div>
+          <div class="modal-style modal-send-message jsModalMessageVacancy">
+            <h2>Написать нам
+            </h2>
+            <form class="jsModalRegForm">
+              <select class="jsModalSelectVacancy">
+                <option>1
+                </option>
+                <option>2
+                </option>
+                <option>3
+                </option>
+              </select><textarea class="jsMessage" name="message" rows="5" placeholder="Введите сообщение"></textarea>
+              <button class="jsBtnReg jsBtn" type="submit" disabled="disabled">Отправить
+              </button>
+            </form>
           </div>
         </div>
       </div>

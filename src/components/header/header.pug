@@ -6,7 +6,12 @@ mixin header()
       +b.header
         +b.home__main-top
           +e.main-header
-            +e('nav').nav
+            +b('button').mobile-nav-btn.jsOpenNavMenu
+              +e('span')
+              +e('span')
+              +e('span')
+            +b.filter-overlay.nav-overlay.jsNavOverlay
+            +e('nav').nav.jsNavMenu
               +e('a').nav-item(href='index.html') Главная
               +e('a').nav-item(href='resume.html') Резюме
               +e('a').nav-item(href='all-resume.html') Поиск резюме

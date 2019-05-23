@@ -8,7 +8,7 @@
   overflow: hidden
 
 .modal-overlay
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   width: 100vw
@@ -18,7 +18,7 @@
   z-index: 10
 
 .modal-position
-  position: absolute
+  position: fixed
   top: 50%
   left: 50%
   background-color: #ffffff
@@ -74,6 +74,22 @@
     flex-direction: column
     align-items: center
 
+    & .select2-container
+      width: 100% !important
+      margin-bottom: 15px !important
+
+      &.select2-container--default .select2-selection--single
+        box-shadow: 0 0 59px rgba(40, 40, 40, 0.05) !important
+        border-radius: 35px !important
+        border: 1px solid #e8e8e8 !important
+        background-color: #ffffff !important
+
+        & .select2-selection__rendered
+          padding: 0 0 0 17px !important
+          font-size: 16px !important
+          font-weight: 400 !important
+          color: #a8a8a8 !important
+
     & input
       width: 420px
       margin-bottom: 25px
@@ -89,6 +105,15 @@
         width: 350px
       @media (max-width: 576px)
         width: 300px
+
+    & textarea
+      max-width: 420px
+      width: 100%
+      padding: 20px 0 20px 40px
+      box-shadow: 0 0 59px rgba(40, 40, 40, 0.05)
+      border-radius: 35px
+      border: 1px solid #e8e8e8
+      background-color: #ffffff
 
     & button
       position: relative
@@ -190,6 +215,12 @@
     overflow: scroll
 
 .modal-reg
+  display: none
+  @media (max-height: 650px)
+    height: 100vh
+    overflow: scroll
+
+.modal-send-message
   display: none
   @media (max-height: 650px)
     height: 100vh

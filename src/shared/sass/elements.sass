@@ -278,14 +278,19 @@
     background-color: rgba(13, 21, 102, .3)
     border-radius: 10px
 
-    @media (max-width: 675px)
-      right: 0
+    @media (max-width: 992px)
+      right: 50%
       left: auto
       background-color: rgba(13, 21, 102, 1)
-
-    @media (max-width: 675px)
-      right: 50%
       transform: translateX(50%)
+
 
 .dropdown .form-logout
   margin-top: 10px
+
+.active-nav
+  transform: translateY(0) !important
+  transition: all ease 1s !important
+
+.nav-overlay
+  display: none

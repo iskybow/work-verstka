@@ -49,3 +49,47 @@
     &:hover
       color: #ffffff
       background-color: darken($red, 20)
+
+.mobile-nav-btn
+  position: fixed
+  top: 20px
+  left: 20px
+  display: none
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 30px
+  height: 30px
+  padding: 0
+  background-image: linear-gradient(to left, #dd3d34 0%, #af2a22 99%, #af2a22 100%)
+  border: none
+  border-radius: 10px
+  outline: none
+  cursor: pointer
+  transition: all ease .3s
+  z-index: 11
+
+  @media (max-width: 992px)
+    display: flex
+
+  & span
+    width: 20px
+    height: 1.5px
+    margin: 2px 0
+    background: #000000
+
+  &.activeBtn
+    transition: all ease .3s
+
+    & span:first-child
+      position: absolute
+      margin: 0
+      transform: rotate(45deg)
+
+    & span:nth-child(2)
+      display: none
+
+    & span:last-child
+      position: absolute
+      margin: 0
+      transform: rotate(-45deg)

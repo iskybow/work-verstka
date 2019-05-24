@@ -1,0 +1,103 @@
+mixin nhome()
+  +b.nhome
+    +e.main
+      +b.nhome-white-line
+        +e.square
+      +b.nhome-white-line
+        +e.square
+      +b.nhome-white-line
+        +e.square
+      +b.nhome-white-line
+        +e.square
+      +b.nhome-white-line
+        +e.square
+      +b.nhome-white-line
+        +e.square
+      +e.main-top
+        +e.main-header
+          +b('button').mobile-nav-btn.jsOpenNavMenu
+            +e('span')
+            +e('span')
+            +e('span')
+          +b.filter-overlay.nav-overlay.jsNavOverlay
+          +e('nav').nav.jsNavMenu
+            +e('a').nav-item(href='index.html') Главная
+            +e('a').nav-item(href='resume.html') Резюме
+            +e('a').nav-item(href='all-resume.html') Поиск резюме
+            //+e('button').nav-item.nav-btn.jsLogin Вход
+            +b.dropdown.jsMenu
+              +b('span').nhome__nav-item.nav-btn.jsOpenMenu Никита Лисовский
+              +e.menu.jsShowMenu
+                +b('a')(href='/personal-area').nhome__nav-item Личный кабинект
+                +b('a')(href='/personal-area').nhome__nav-item Выйти
+        +e.main-content
+          +e('form').form
+            +e('span').form-text Сейчас на сайте свыше <span class='white-text'> 2398 вакансий </span> и <span class='white-text'> 3483 резюме</span>
+            +e('input').form-input(placeholder='Я ищу...')
+            +e.form-select
+              +b('select').home__form-select-js
+                option
+                - for (var i = 1; i < 4; i++)
+                  option= `Пункт ${i}`
+            +e('button').search.btn-red(type='submit')
+              i.fa.fa-search
+          a.btn.btn-red.mr20(href='#') разместить резюме
+          a.btn.btn-red(href='all-vacancies.html') Найти вакансии
+      +e.main-bottom
+        //+e.main-circle
+        +e('img')(src='assets/images/home-big-circle.png' alt='').main-big-circle
+        +e('img')(src='assets/images/gerb-doneck-z.png' alt='').main-gerb
+        +e('h1').title Работа
+        +e('p').desc Сделайте грамотный выбор! Предлагаем размещение и продвижение на новой и перспективной площадке <span class="yellow-text">РаботаДНР</span>. Станьте первым и получайте максимум продаж, опережая конкурентов на несколько шагов. Полностью берем на себя все, что связано с размещением на маркетплейсе, эффективно управляем ценами и поставками
+        +e('img').main-bottom-img(src='assets/images/img1.png' img='')
+    +e.aside
+      +e('img').dots2(src='assets/images/bg-dots.png' alt='')
+      +e.aside-header
+        +e('span').aside-header-vacancy Вакансии дня
+      +b.home__slider
+         - for (var i = 0; i < 5; i++)
+          +b.single-card.home-card
+            +e.tr
+            +e.header
+              +e('img')(src='assets/images/rbc-logo.png' alt='')
+              +e.top
+                +e.cat-city
+                  a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                  a.d-flex.align-items-center(href='#')
+                    +e('img').icon(src='assets/images/arr-place.png' alt='')
+                    span.ml5 Донецк
+                +e('h3').title Дизайнер презентаций
+                +e.info-second
+                  span.mr10 Добавлено: 19 марта 2018, 17:15
+                  +e.view
+                    +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
+                    span 255
+            +e.info
+              p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+              p Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+            .d-flex.flex-wrap.align-items-center.justify-content-start.mt10
+              a.btn-card.btn-red Откликнуться
+              +e('a').like(href='#')
+                i.fa.fa-heart-o
+                span В избранное
+    +e.footer
+      +e('a').footer-item(href='#') IT, компьютеры, интернет 28
+      +e('a').footer-item(href='#') Администрация, руководство среднего звена 23
+      +e('a').footer-item(href='#') Бухгалтерия, аудит 13
+      +e('a').footer-item(href='#') IT, компьютеры, интернет 28
+      +e('a').footer-item(href='#') Администрация, руководство среднего звена 23
+      +e('a').footer-item(href='#') Бухгалтерия, аудит 13
+      +e('a').footer-item(href='#') IT, компьютеры, интернет 28
+      +e('a').footer-item(href='#') Администрация, руководство среднего звена 23
+      +e('a').footer-item.mob-hide(href='#') Бухгалтерия, аудит 13
+      +e('a').footer-item.mob-hide(href='#') IT, компьютеры, интернет 28
+      +e('a').footer-item.mob-hide(href='#') Администрация, руководство среднего звена 23
+      +e('a').footer-item.mob-hide(href='#') Бухгалтерия, аудит 13
+      +e('a').footer-item.mob-hide(href='#') IT, компьютеры, интернет 28
+      +e('a').footer-item.mob-hide(href='#') Администрация, руководство среднего звена 23
+      +e('a').footer-item.mob-hide(href='#') Бухгалтерия, аудит 13
+      +e('a').footer-item.mob-hide(href='#') IT, компьютеры, интернет 28
+      +e('a').footer-item.mob-hide(href='#') Администрация, руководство среднего звена 23
+      +e('a').footer-item(href='#') все категории
+    +e('img').dots1(src='assets/images/bg-dots.png' alt='')
+    +e('img')(src='assets/images/circle.png' alt='').circle

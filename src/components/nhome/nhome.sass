@@ -8,7 +8,6 @@
   overflow: hidden
   background-color: $bg
   @media (max-height: 700px)
-    height: 100%
     overflow-y: auto
     overflow-x: hidden
   @media (max-width: 993px)
@@ -639,10 +638,7 @@
   margin-left: 43px !important
   @media (max-width: 1500px)
     margin-left: 33px !important
-  @media (max-width: 400px)
-    width: 95% !important
-    margin-left: 10px !important
-  @media (max-width: 375px)
+  @media (max-width: 475px)
     width: 100% !important
     margin-left: 0 !important
     margin-right: 0 !important
@@ -678,10 +674,15 @@
       text-decoration: none
 
   & .single-card__title
+    display: block
+    width: 280px
     margin: 5px 0 0
     font-size: 16px
     color: #2a2a2a
     font-weight: 800
+    text-decoration: none
+    @media (max-width: 1500px)
+      width: 210px
 
   & .single-card__info
     font-size: 12px
@@ -706,10 +707,10 @@
   @media (max-width: 1500px)
     width: 90% !important
     margin-left: 33px !important
-  @media (max-width: 400px)
-    width: 95% !important
-    margin-left: 10px !important
-  @media (max-width: 375px)
+  //@media (max-width: 400px)
+  //  width: 95% !important
+  //  margin-left: 10px !important
+  @media (max-width: 475px)
     width: 100% !important
     margin-left: 0 !important
     margin-right: 0 !important

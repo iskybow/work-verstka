@@ -210,6 +210,9 @@ $(document).ready(function () {
     $('body').addClass('body-overflow');
   });
   $('.jsVacancyModal').click(function () {
+    var vacancy_id=$(this).attr('data-id');
+    if(vacancy_id!==undefined)
+      $("input[name=vacancy_id]").val(vacancy_id);
     $('.jsModal').fadeIn();
     $('.jsModalMessageVacancy').fadeIn();
     $('body').addClass('body-overflow');

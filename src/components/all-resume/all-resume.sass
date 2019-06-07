@@ -110,6 +110,16 @@
     align-items: center
     margin-top: 10px
 
+    @media (max-width: 475px)
+      flex-direction: column
+
+    & .btn-card
+      margin-left: auto
+      border-radius: 11px
+      @media (max-width: 475px)
+        margin-top: 15px
+        margin-right: auto
+
   &__soc
     display: flex
     align-items: center
@@ -118,11 +128,16 @@
       flex-direction: column
       align-items: flex-start
 
+    @media (max-width: 475px)
+      align-items: center
+
     & p
       margin: 0 21px 0 0
       font-size: 14px
       font-weight: 500
       color: #000104
+      @media (max-width: 475px)
+        margin-right: 0
 
     & a
       display: flex

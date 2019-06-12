@@ -51,3 +51,5 @@ mixin modal-block()
             +e('option') 3
           +b('textarea')(name='message' rows='5' placeholder='Введите сообщение').jsMessage
           +b('button')(type='submit' disabled).jsBtnReg.jsBtn Отправить
+      +b.modal-style.modal-success.jsModalSuccess
+        +e('h2') Вы были успешно зарегистрированы

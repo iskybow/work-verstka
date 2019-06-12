@@ -27,7 +27,9 @@ mixin nhome()
             //+e('button').nav-item.nav-btn.jsLogin Вход
             +b.dropdown.jsMenu
               +b('span').nhome__nav-item.nav-btn.jsOpenMenu Никита Лисовский
+                +b('span') >
               +e.menu.jsShowMenu
+                +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад
                 +b('a')(href='/personal-area').nhome__nav-item Личный кабинект
                 +b('a')(href='/personal-area').nhome__nav-item Выйти
         +e.main-content

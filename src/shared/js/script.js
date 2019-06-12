@@ -248,35 +248,51 @@ $(document).ready(function () {
     }
   });
 
-  $('.jsOpenMenu').mouseenter(function () {
-    $('.jsShowMenu').fadeIn().css('display', 'flex');
-  });
+  if(window.innerWidth > 1251) {
+    $('.jsOpenMenu').mouseenter(function () {
+      $('.jsShowMenu').fadeIn().css('display', 'flex');
+    });
 
-  // $('.jsShowMenu').mouseleave(function () {
-  //   $('.jsShowMenu').fadeOut();
-  // });
+    // $('.jsShowMenu').mouseleave(function () {
+    //   $('.jsShowMenu').fadeOut();
+    // });
 
-  $('.jsMenu').mouseleave(function (e) {
-    if (!$('.jsShowMenu').is(e.target) || !$('.jsOpenMenu').is(e.target)) {
-      $('.jsShowMenu').fadeOut();
-    }
-  });
+    $('.jsMenu').mouseleave(function (e) {
+      if (!$('.jsShowMenu').is(e.target) || !$('.jsOpenMenu').is(e.target)) {
+        $('.jsShowMenu').fadeOut();
+      }
+    });
+  }
 
   $('.jsOpenNavMenu').click(function () {
     $('.jsOpenNavMenu').toggleClass('activeBtn');
     $('.jsNavMenu').toggleClass('active-nav');
     if($('.jsNavOverlay').hasClass('active-filter-overlay')) {
       $('.jsNavOverlay').removeClass('active-filter-overlay').css('display', 'none')
+      $('.jsNavMenu').removeClass('active-nav');
+      $('.jsShowMenu').removeClass('active-nav-drop');
     } else {
       $('.jsNavOverlay').addClass('active-filter-overlay').css('display', 'block')
     }
+  });
 
+  if(window.innerWidth < 1250) {
+    $('.jsOpenMenu').click(function () {
+      $('.jsNavMenu').toggleClass('active-nav');
+      $('.jsShowMenu').toggleClass('active-nav-drop');
+    });
+  }
+
+  $('.jsMenuPrev').click(function () {
+    $('.jsNavMenu').toggleClass('active-nav');
+    $('.jsShowMenu').toggleClass('active-nav-drop');
   });
 
   $('.jsNavOverlay').click(function () {
-    $('.jsOpenNavMenu').toggleClass('activeBtn');
-    $('.jsNavMenu').toggleClass('active-nav');
-    $('.jsNavOverlay').toggleClass('active-filter-overlay').css('display', 'none')
+    $('.jsOpenNavMenu').removeClass('activeBtn');
+    $('.jsNavMenu').removeClass('active-nav');
+    $('.jsShowMenu').removeClass('active-nav-drop');
+    $('.jsNavOverlay').removeClass('active-filter-overlay').css('display', 'none')
   });
 
 });

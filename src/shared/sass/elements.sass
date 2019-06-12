@@ -262,9 +262,16 @@
 
 .dropdown
   position: relative
+  @media (max-width: 1250px)
+    width: 100%
 
   & > span
     padding-bottom: 15px
+    & > span
+      display: none
+      @media (max-width: 1250px)
+        display: block
+        margin-left: 10px
 
   &__menu
     position: absolute
@@ -280,16 +287,29 @@
     z-index: 3
 
     @media (max-width: 1250px)
-      background-color: #000000
-    @media (max-width: 992px)
-      right: 50%
-      left: auto
-      //background-color: rgba(13, 21, 102, 1)
-      transform: translateX(50%)
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      margin: 0
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: center
+      padding: 0
+      background: #ffffff
+      color: #000000
+      transform: translateX(-100%)
+      transition: all ease 1s
+      border-radius: 0
+      z-index: 10
 
     & .nhome__nav-item
       color: #000000
       text-align: left
+
+      &:first-child
+        margin-top: 60px
 
     & .home__nav-item
       color: #000000
@@ -300,7 +320,11 @@
   margin-top: 10px
 
 .active-nav
-  transform: translateY(0) !important
+  transform: translateX(0) !important
+  transition: all ease 1s !important
+
+.active-nav-drop
+  transform: translateX(100%) !important
   transition: all ease 1s !important
 
 .nav-overlay
@@ -353,3 +377,8 @@
     display: none
   @media (max-height: 740px)
     display: none
+
+.mobile-prev
+  display: none
+  @media (max-width: 1250px)
+    display: flex

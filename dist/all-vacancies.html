@@ -24,9 +24,10 @@
                 <div class="filter-overlay nav-overlay jsNavOverlay">
                 </div>
                 <nav class="home__nav jsNavMenu"><a class="home__nav-item" href="index.html">Главная</a><a class="home__nav-item" href="resume.html">Резюме</a><a class="home__nav-item" href="all-resume.html">Поиск резюме</a>
-                  <!--+e('button').nav-item.jsLogin Вход-->
-                  <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User</span>
-                    <div class="dropdown__menu jsShowMenu"><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
+                  <button class="home__nav-item jsLogin">Вход
+                  </button>
+                  <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User<span>></span></span>
+                    <div class="dropdown__menu jsShowMenu"><span class="nhome__nav-item mobile-prev jsMenuPrev">Назад</span><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
                     </div>
                   </div>
                 </nav>
@@ -692,6 +693,10 @@
               <button class="jsBtnReg jsBtn" type="submit" disabled="disabled">Отправить
               </button>
             </form>
+          </div>
+          <div class="modal-style modal-success jsModalSuccess">
+            <h2>Вы были успешно зарегистрированы
+            </h2>
           </div>
         </div>
       </div>

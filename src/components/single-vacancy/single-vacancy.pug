@@ -9,22 +9,20 @@ mixin single-vacancy()
         +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
           +e('img')(src='assets/images/add-contact.svg' alt='')
         +e.left
-          +e.left__first
+          +e.first
             +b.category-block
-              +b('a')(href='#').btn-card.btn-card-small.btn-gray Администрация, руководство среднего звена
-              +b('a')(href='#').btn-card.btn-card-small.btn-gray Бухгалтерия, аудит
-              +b('a')(href='#').btn-card.btn-card-small.btn-gray Гостинично-ресторанный бизнес, туризм
+              +b('a')(href='#').btn-card.btn-card-small.btn-gray Администрация
             +e('span') Добавлено:<br> 19 марта 2018, 17:15
-            +e.left__first__view
+            +e.view
               +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
               span 255
-            +e('a')(href='#').left__first__city.d-flex.align-items-center.ml-auto.mt5.mb5
+            +e('a')(href='#').city.d-flex.align-items-center.ml-auto.mt5.mb5
               +e('img').icon(src='assets/images/arr-place.png' alt='')
               span.ml5 Санкт-Петербург
-          +e('h3').left__head Менеджер по продажам (холодные звонки)
-          +e.left__price
+          +e('h3').head Менеджер по продажам (холодные звонки)
+          +e.price
             +e('span') 8000 руб.
-            +e.left__price__soc
+            +e.soc
               +e('span') Написать соискателю в сетях
               +b('a')(href='#').vk-bg
                 +e('img')(src='assets/images/vk.svg' alt='')
@@ -32,36 +30,36 @@ mixin single-vacancy()
                 +e('img')(src='assets/images/ok.svg' alt='')
               +b('a')(href='#').fb-bg
                 +e('img')(src='assets/images/fb.svg' alt='')
-          +e.left__employment
-            +e('h3').left__employment__head Вид занятости:
-            +e('p').left__employment__text Полная занятость
-          +e.left__description
-            +e('h3').left__description__head Описание вакансии
-            +e('p').left__description__text Bernas Company приглашает целеустремленных и активных людей на должность менеджера по продажам
-            +e('p').left__description__text Занимаемся продажей рекламных мест в поисковых системах
-            +e('p').left__description__text Яндекс и Гугл. Наш сайт: ppp24.ru
-          +e.left__requirements
-            +e('h3').left__requirements__head Требования:
-            +e('p').left__requirements__text - Возраст от 22 - 25 лет.
-            +e('p').left__requirements__text - Грамотная речь, четкая дикция.
-            +e('p').left__requirements__text - Знание ПК, Интернет, почта.
-            +e('p').left__requirements__text - Приветствуется опыт работы в телефонных продажах.
-            +e('p').left__requirements__text - Желание активно работать и хорошо зарабатывать.
-            +e('p').left__requirements__text - Желание развиваться в профессиональном плане.
-          +e.left__duties
-            +e('h3').left__duties__head Обязаности
-            +e('p').left__duties__text Поиск клиентов в интернете и добавление их в свою базу.
-            +e('p').left__duties__text Исходящие звонки клиентам (холодные звонки, IP телефония)
-            +e('p').left__duties__text Работа по скрипту (Знакомство-Презентация-Заключение договора-Оплата)
-            +e('p').left__duties__text Соблюдение стандартов компании — за это выплачивается дополнительный бонус.
-          +e.left__conditions
-            +e('h3').left__conditions__head Условия работы:
-            +e('p').left__conditions__text Работа в офисе (офис в районе АС Центр — удобное расположение).
-            +e('p').left__conditions__text Заработная плата — ставка от 11 000 рублей до 40 000 руб. Ставка зависит от объема продаж.
-            +e('p').left__conditions__text Выплата дохода — 2 раза в месяц.
-            +e('p').left__conditions__text Предусмотрена 13-я зарплата.
-            +e('p').left__conditions__text График работы: пн-пт, с 08:00—16:00, сб-вс выходной.
-            +e('p').left__conditions__text Дружный молодой коллектив.
+          +e.employment
+            +e('h3').employment-head Вид занятости:
+            +e('p').employment-text Полная занятость
+          +e.description
+            +e('h3').description-head Описание вакансии
+            +e('p').description-text Bernas Company приглашает целеустремленных и активных людей на должность менеджера по продажам
+            +e('p').description-text Занимаемся продажей рекламных мест в поисковых системах
+            +e('p').description-text Яндекс и Гугл. Наш сайт: ppp24.ru
+          +e.requirements
+            +e('h3').requirements-head Требования:
+            +e('p').requirements-text - Возраст от 22 - 25 лет.
+            +e('p').requirements-text - Грамотная речь, четкая дикция.
+            +e('p').requirements-text - Знание ПК, Интернет, почта.
+            +e('p').requirements-text - Приветствуется опыт работы в телефонных продажах.
+            +e('p').requirements-text - Желание активно работать и хорошо зарабатывать.
+            +e('p').requirements-text - Желание развиваться в профессиональном плане.
+          +e.duties
+            +e('h3').duties-head Обязаности
+            +e('p').duties-text Поиск клиентов в интернете и добавление их в свою базу.
+            +e('p').duties-text Исходящие звонки клиентам (холодные звонки, IP телефония)
+            +e('p').duties-text Работа по скрипту (Знакомство-Презентация-Заключение договора-Оплата)
+            +e('p').duties-text Соблюдение стандартов компании — за это выплачивается дополнительный бонус.
+          +e.conditions
+            +e('h3').conditions-head Условия работы:
+            +e('p').conditions-text Работа в офисе (офис в районе АС Центр — удобное расположение).
+            +e('p').conditions-text Заработная плата — ставка от 11 000 рублей до 40 000 руб. Ставка зависит от объема продаж.
+            +e('p').conditions-text Выплата дохода — 2 раза в месяц.
+            +e('p').conditions-text Предусмотрена 13-я зарплата.
+            +e('p').conditions-text График работы: пн-пт, с 08:00—16:00, сб-вс выходной.
+            +e('p').conditions-text Дружный молодой коллектив.
         +e.right.sidebar-single.jsOpenContacts#sidebar-single
           +b.single-vacancy-overlay.jsHideContacts
           +b.sidebar-inner

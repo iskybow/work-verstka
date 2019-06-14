@@ -12,7 +12,8 @@ mixin header()
               +e('span')
             +b.filter-overlay.nav-overlay.jsNavOverlay
             +e('nav').nav.jsNavMenu
-              +e('a').nav-item(href='index.html') Главная
+              +e('a').nav-item_logo(href='index.html')
+                +e('img')(src='assets/images/logo-main.png')
               +e('a').nav-item(href='resume.html') Резюме
               +e('a').nav-item(href='all-resume.html') Поиск резюме
               +e('button').nav-item.jsLogin Вход

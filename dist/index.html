@@ -27,32 +27,24 @@
             <div class="nhome-white-line__square">
             </div>
           </div>
-          <div class="nhome-white-line">
-            <div class="nhome-white-line__square">
-            </div>
-          </div>
-          <div class="nhome-white-line">
-            <div class="nhome-white-line__square">
-            </div>
-          </div>
-          <div class="nhome-white-line">
-            <div class="nhome-white-line__square">
-            </div>
-          </div>
           <div class="nhome__main-top">
             <div class="nhome__main-header">
               <button class="mobile-nav-btn jsOpenNavMenu"><span></span><span></span><span></span>
               </button>
               <div class="filter-overlay nav-overlay jsNavOverlay">
               </div>
-              <nav class="nhome__nav jsNavMenu"><a class="nhome__nav-item" href="index.html">Главная</a><a class="nhome__nav-item" href="resume.html">Резюме</a><a class="nhome__nav-item" href="all-resume.html">Поиск резюме</a>
-                <!--+e('button').nav-item.nav-btn.jsLogin Вход-->
-                <div class="dropdown jsMenu"><span class="nhome__nav-item nav-btn jsOpenMenu">Никита Лисовский<span>></span></span>
-                  <div class="dropdown__menu jsShowMenu"><span class="nhome__nav-item mobile-prev jsMenuPrev">Назад</span><a class="nhome__nav-item" href="/personal-area">Личный кабинект</a><a class="nhome__nav-item" href="/personal-area">Выйти</a>
-                  </div>
-                </div>
+              <nav class="nhome__nav jsNavMenu"><a class="nhome__nav-item nhome__nav-item_logo" href="index.html"><img src="assets/images/logo-main.png" alt="" role="presentation"/></a><a class="nhome__nav-item" href="resume.html">Резюме</a><a class="nhome__nav-item" href="all-resume.html">Поиск резюме</a>
+                <button class="nhome__nav-item nav-btn jsLogin">Вход
+                </button>
               </nav>
             </div>
+            <!--    +b.dropdown.jsMenu-->
+            <!--      +b('span').nhome__nav-item.nav-btn.jsOpenMenu Никита Лисовский-->
+            <!--        +b('span') >-->
+            <!--      +e.menu.jsShowMenu-->
+            <!--        +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад-->
+            <!--        +b('a')(href='/personal-area').nhome__nav-item Личный кабинект-->
+            <!--        +b('a')(href='/personal-area').nhome__nav-item Выйти-->
             <div class="nhome__main-content">
               <form class="nhome__form"><span class="nhome__form-text">Сейчас на сайте свыше <span class='white-text'> 2398 вакансий </span> и <span class='white-text'> 3483 резюме</span></span><input class="nhome__form-input" placeholder="Я ищу..." type="text"/>
                 <div class="nhome__form-select">
@@ -76,8 +68,10 @@
             </p><img class="nhome__main-bottom-img" src="assets/images/img1.png" img="" alt="" role="presentation"/>
           </div>
         </div>
-        <div class="nhome__aside"><img class="nhome__dots2" src="assets/images/bg-dots.png" alt="" role="presentation"/>
-          <div class="nhome__aside-header"><span class="nhome__aside-header-vacancy">Вакансии дня</span>
+        <aside class="nhome__aside"><img class="nhome__dots2" src="assets/images/bg-dots.png" alt="" role="presentation"/>
+          <div class="nhome__aside-header">
+            <h3 class="nhome__aside-header-vacancy">Вакансии дня
+            </h3>
           </div>
           <div class="home__slider">
             <div class="single-card home-card">
@@ -181,7 +175,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </aside>
         <div class="nhome__footer"><a class="nhome__footer-item" href="#">IT, компьютеры, интернет 28</a><a class="nhome__footer-item" href="#">Администрация, руководство среднего звена 23</a><a class="nhome__footer-item" href="#">Бухгалтерия, аудит 13</a><a class="nhome__footer-item" href="#">IT, компьютеры, интернет 28</a><a class="nhome__footer-item" href="#">Администрация, руководство среднего звена 23</a><a class="nhome__footer-item" href="#">Бухгалтерия, аудит 13</a><a class="nhome__footer-item" href="#">IT, компьютеры, интернет 28</a><a class="nhome__footer-item" href="#">Администрация, руководство среднего звена 23</a><a class="nhome__footer-item mob-hide" href="#">Бухгалтерия, аудит 13</a><a class="nhome__footer-item mob-hide" href="#">IT, компьютеры, интернет 28</a><a class="nhome__footer-item mob-hide" href="#">Администрация, руководство среднего звена 23</a><a class="nhome__footer-item mob-hide" href="#">Бухгалтерия, аудит 13</a><a class="nhome__footer-item mob-hide" href="#">IT, компьютеры, интернет 28</a><a class="nhome__footer-item mob-hide" href="#">Администрация, руководство среднего звена 23</a><a class="nhome__footer-item mob-hide" href="#">Бухгалтерия, аудит 13</a><a class="nhome__footer-item mob-hide" href="#">IT, компьютеры, интернет 28</a><a class="nhome__footer-item mob-hide" href="#">Администрация, руководство среднего звена 23</a><a class="nhome__footer-item" href="#">все категории</a>
         </div><img class="nhome__dots1" src="assets/images/bg-dots.png" alt="" role="presentation"/><img class="nhome__circle" src="assets/images/circle.png" alt="" role="presentation"/>
       </div>
@@ -263,6 +257,7 @@
       </div>
     </div>
     <script src="assets/libs/jquery-3.3.1.min.js"></script>
+    <script src="assets/libs/resizeSensor.js"></script>
     <script src="assets/libs/jquery.sticky-kit.js"></script>
     <script src="assets/libs/slick/slick.min.js"></script>
     <script src="assets/libs/select2/select2.min.js"></script>

@@ -49,180 +49,180 @@
     padding: 20px
     background-color: #ffffff
 
-    &__first
-      display: flex
-      align-items: center
+  &__first
+    display: flex
+    align-items: center
+    @media (max-width: 769px)
+      justify-content: space-between
+      width: 100%
+    @media (max-width: 476px)
+      flex-wrap: wrap
+
+    & .btn-card
+      margin-right: 5px
+
+    & > span
+      margin-left: 45px
+      color: #a8a8a8
+      letter-spacing: 0.33px
+      font-size: 10px
+      font-weight: 500
       @media (max-width: 769px)
-        justify-content: space-between
-        width: 100%
+        margin-left: 20px
       @media (max-width: 476px)
-        flex-wrap: wrap
+        width: auto
 
-      & .btn-card
-        margin-right: 5px
-
-      & > span
-        margin-left: 45px
-        color: #a8a8a8
-        letter-spacing: 0.33px
-        font-size: 10px
-        font-weight: 500
+      & br
+        display: none
         @media (max-width: 769px)
-          margin-left: 20px
-        @media (max-width: 476px)
-          width: auto
+          display: block
 
-        & br
-          display: none
-          @media (max-width: 769px)
-            display: block
+  &__view
+    display: flex
+    align-items: center
+    margin: 5px 95px 5px 10px
+    @media (max-width: 769px)
+      margin-right: 30px
+    @media (max-width: 476px)
+      width: 50%
+      margin: 10px 0 0
 
-      &__view
-        display: flex
-        align-items: center
-        margin: 5px 95px 5px 10px
-        @media (max-width: 769px)
-          margin-right: 30px
-        @media (max-width: 476px)
-          width: 50%
-          margin: 10px 0 0
+    & span
+      color: #a8a8a8
+      letter-spacing: 0.33px
+      font-size: 10px
+      font-weight: 500
 
-        & span
-          color: #a8a8a8
-          letter-spacing: 0.33px
-          font-size: 10px
-          font-weight: 500
+  &__city
+    color: #a8a8a8
+    letter-spacing: 0.33px
+    font-size: 10px
+    font-weight: 500
+    text-decoration: none
+    white-space: nowrap
+    @media (max-width: 476px)
+      margin: 10px 0 0 !important
 
-      &__city
-        color: #a8a8a8
-        letter-spacing: 0.33px
-        font-size: 10px
-        font-weight: 500
-        text-decoration: none
-        white-space: nowrap
-        @media (max-width: 476px)
-          margin: 10px 0 0 !important
+  &__head
+    margin: 20px 0
+    font-weight: 700
+    font-size: 23px
+    color: #000000
 
-    &__head
-      margin: 20px 0
-      font-weight: 700
-      font-size: 23px
-      color: #000000
+  &__price
+    display: flex
+    align-items: center
 
-    &__price
+    & > span
+      margin-right: 60px
+      font-weight: 800
+      font-size: 29px
+      color: #0d1566
+      white-space: nowrap
+      @media (max-width: 476px)
+        margin-right: 20px
+
+  &__soc
+    display: flex
+    align-items: center
+    @media (max-width: 769px)
+      flex-wrap: wrap
+
+    & span
+      margin-right: 20px
+      font-weight: 500
+      color: #000104
+      @media (max-width: 769px)
+        width: 100%
+        margin-bottom: 10px
+        margin-right: 0
+
+    & a
       display: flex
       align-items: center
+      justify-content: center
+      width: 18px
+      height: 18px
+      margin-right: 10px
+      border-radius: 50%
 
-      & > span
-        margin-right: 60px
-        font-weight: 800
-        font-size: 29px
-        color: #0d1566
-        white-space: nowrap
-        @media (max-width: 476px)
-          margin-right: 20px
+      & img
+        width: 11px
+        height: auto
 
-      &__soc
-        display: flex
-        align-items: center
-        @media (max-width: 769px)
-          flex-wrap: wrap
+  &__employment
+    display: flex
+    flex-direction: column
+    align-items: flex-start
 
-        & span
-          margin-right: 20px
-          font-weight: 500
-          color: #000104
-          @media (max-width: 769px)
-            width: 100%
-            margin-bottom: 10px
-            margin-right: 0
+    &-head
+      margin: 30px 0 0
+      font-weight: 700
+      font-size: 22px
 
-        & a
-          display: flex
-          align-items: center
-          justify-content: center
-          width: 18px
-          height: 18px
-          margin-right: 10px
-          border-radius: 50%
+    &-text
+      margin: 0
+      font-weight: 500
 
-          & img
-            width: 11px
-            height: auto
+  &__description
+    display: flex
+    flex-direction: column
+    align-items: flex-start
 
-    &__employment
-      display: flex
-      flex-direction: column
-      align-items: flex-start
+    &-head
+      margin: 30px 0
+      font-weight: 700
+      font-size: 22px
+      color: #0d1566
 
-      &__head
-        margin: 30px 0 0
-        font-weight: 700
-        font-size: 22px
+    &-text
+      margin: 0
+      font-weight: 500
 
-      &__text
+  &__requirements
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    &-head
+      margin: 30px 0
+      font-weight: 700
+      font-size: 22px
+
+    &-text
+      margin: 0 0 15px
+      font-weight: 500
+
+      &:last-child
         margin: 0
-        font-weight: 500
 
-    &__description
-      display: flex
-      flex-direction: column
-      align-items: flex-start
+  &__duties
+    display: flex
+    flex-direction: column
+    align-items: flex-start
 
-      &__head
-        margin: 30px 0
-        font-weight: 700
-        font-size: 22px
-        color: #0d1566
+    &-head
+      margin: 30px 0
+      font-weight: 700
+      font-size: 22px
 
-      &__text
-        margin: 0
-        font-weight: 500
+    &-text
+      margin: 0
+      font-weight: 500
 
-    &__requirements
-      display: flex
-      flex-direction: column
-      align-items: flex-start
+  &__conditions
+    display: flex
+    flex-direction: column
+    align-items: flex-start
 
-      &__head
-        margin: 30px 0
-        font-weight: 700
-        font-size: 22px
+    &-head
+      margin: 30px 0
+      font-weight: 700
+      font-size: 22px
 
-      &__text
-        margin: 0 0 15px
-        font-weight: 500
-
-        &:last-child
-          margin: 0
-
-    &__duties
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-
-      &__head
-        margin: 30px 0
-        font-weight: 700
-        font-size: 22px
-
-      &__text
-        margin: 0
-        font-weight: 500
-
-    &__conditions
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-
-      &__head
-        margin: 30px 0
-        font-weight: 700
-        font-size: 22px
-
-      &__text
-        margin: 0
-        font-weight: 500
+    &-text
+      margin: 0
+      font-weight: 500
 
   &__right
     display: flex

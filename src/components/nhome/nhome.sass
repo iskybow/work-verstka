@@ -71,8 +71,7 @@
         flex-direction: column
         margin: 20px auto 0
       &-vacancy
-        margin-left: 25px
-        margin-right: 60px
+        margin: 0 60px 0 25px
         color: #dd3d34
         font-size: 22px
         font-weight: 800
@@ -332,7 +331,7 @@
         background-color: $red
         opacity: 0.26
       .select2
-        width: 120px !important
+        width: 140px !important
       .select2-container .select2-selection--single .select2-selection__rendered
         display: flex
         align-items: center
@@ -399,6 +398,8 @@
   &__nav
     display: flex
     align-items: flex-start
+    justify-content: flex-end
+    width: 100%
     margin-left: auto
     @media (max-width: 1250px)
       position: fixed
@@ -446,6 +447,13 @@
           display: flex
           align-items: center
           width: 100%
+      &_logo
+        position: relative
+        margin: -12px auto 0
+        padding: 0
+        z-index: 2
+        @media (max-width: 1250px)
+          display: none
   &__footer
     position: relative
     z-index: 1
@@ -643,10 +651,10 @@
       flex-direction: column
 
     & > img
-      max-width: 108px
-      max-height: 38px
+      max-width: 70px
+      max-height: 70px
       width: auto
-      height: 100%
+      height: auto
       margin-right: 18px
 
   & .single-card__cat-city
@@ -702,5 +710,5 @@
     margin-right: 0 !important
 
 @media (max-width: 1250px)
-  .nhome__nav > .nhome__nav-item:first-child
+  .nhome__nav > .nhome__nav-item:nth-child(2)
     margin-top: 60px

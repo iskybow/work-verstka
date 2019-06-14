@@ -122,43 +122,53 @@ $(document).ready(function () {
       topSpacing: 0,
       bottomSpacing: 20,
       containerSelector: '.v-content-bottom',
-      innerWrapperSelector: '.sidebar-inner'
+      innerWrapperSelector: '.sidebar-inner',
+      resizeSensor: true
     });
   }
 
   if ($('#sidebar-vr').length > 0 && window.innerWidth > 993) {
-    var stickySidebar = new StickySidebar('#sidebar-vr', {
+    var _stickySidebar = new StickySidebar('#sidebar-vr', {
       topSpacing: 0,
       bottomSpacing: 0,
       containerSelector: '.container-for-sidebar',
-      innerWrapperSelector: '.sidebar-inner'
+      innerWrapperSelector: '.sidebar-inner',
+      resizeSensor: true
     });
   }
 
   if ($('#sidebar-single').length > 0 && window.innerWidth > 993) {
-    var _stickySidebar = new StickySidebar('#sidebar-single', {
+    var _stickySidebar2 = new StickySidebar('#sidebar-single', {
       topSpacing: 20,
       bottomSpacing: 20,
       containerSelector: '.single-block-slider',
-      innerWrapperSelector: '.sidebar-inner'
+      innerWrapperSelector: '.sidebar-inner',
+      resizeSensor: true
     });
   }
 
   // $('.jsOpenCheck').next().hide();
   $('.jsOpenCheck').click(function () {
-    stickySidebar.updateSticky();
     if ($(this).hasClass("open-services-mob")) {
       $(this).removeClass('open-services-mob').next().slideDown();
-      $(this).find('.jsBtnPlus').toggleClass('btn-active');
-      $(this).find('.jsBtnMinus').toggleClass('btn-active');
+      var qw = $(this).find('.jsBtnPlus');
+      var qwe = $(this).find('.jsBtnMinus');
+      setTimeout(function () {
+        qw.toggleClass('btn-active');
+      }, 250);
+      setTimeout(function () {
+        qwe.toggleClass('btn-active');
+      }, 250);
     } else {
-      // $('.jsOpenCheck.open-services-mob').not(this).removeClass('open-services-mob').next().slideUp();
       $(this).addClass(' open-services-mob').next().slideUp();
-      $(this).find('.jsBtnPlus').toggleClass('btn-active');
-      $(this).find('.jsBtnMinus').toggleClass('btn-active');
-    }
-    if (window.innerWidth > 993) {
-      stickySidebar.updateSticky();
+      var _qw = $(this).find('.jsBtnPlus');
+      var _qwe = $(this).find('.jsBtnMinus');
+      setTimeout(function () {
+        _qw.toggleClass('btn-active');
+      }, 250);
+      setTimeout(function () {
+        _qwe.toggleClass('btn-active');
+      }, 250);
     }
   });
 

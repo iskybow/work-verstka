@@ -23,13 +23,17 @@
                 </button>
                 <div class="filter-overlay nav-overlay jsNavOverlay">
                 </div>
-                <nav class="home__nav jsNavMenu"><a class="home__nav-item home__nav-item_logo" href="index.html"><img src="assets/images/logo-main.png" alt="" role="presentation"/></a><a class="home__nav-item" href="resume.html">Резюме</a><a class="home__nav-item" href="all-resume.html">Поиск резюме</a>
+                <nav class="home__nav jsNavMenu"><a class="home__nav-item home__nav-item_logo" href="index.html"><img src="assets/images/logo-main.png" alt="" role="presentation"/></a><a class="home__nav-item" href="resume.html">Резюме</a>
+                  <!--+e('a').nav-item(href='all-resume.html') Поиск резюме-->
                   <button class="home__nav-item jsLogin">Вход
                   </button>
-                  <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User<span>></span></span>
-                    <div class="dropdown__menu jsShowMenu"><span class="nhome__nav-item mobile-prev jsMenuPrev">Назад</span><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
-                    </div>
-                  </div>
+                  <!--+b.dropdown.jsMenu-->
+                  <!--  +b('span').home__nav-item.jsOpenMenu User-->
+                  <!--    +b('span') >-->
+                  <!--  +e.menu.jsShowMenu-->
+                  <!--    +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад-->
+                  <!--    +b('a')(href='/personal-area').home__nav-item Личный кабинект-->
+                  <!--    +b('a')(href='/personal-area').home__nav-item Выйти-->
                 </nav>
                 <div class="home__main-email d-flex align-items-center"><span class="home__main-ico">@</span><a href="mailto:info@vendoram.ru">info@vendoram.ru</a>
                 </div>
@@ -56,7 +60,7 @@
           </div>
         </div>
       </header>
-      <section class="resume"><img class="resume__dots2" src="assets/images/bg-dots.png" alt="" role="presentation"/>
+      <div class="resume"><img class="resume__dots2" src="assets/images/bg-dots.png" alt="" role="presentation"/>
         <div class="resume__circle">
         </div>
         <div class="container container-for-sidebar">
@@ -77,7 +81,7 @@
                 </p><span>6 марта 2019</span>
               </div>
             </div>
-            <div class="resume-top"><img class="resume-top__left" src="assets/images/resume_image_1.png" alt="" role="presentation"/>
+            <section class="resume-top"><img class="resume-top__left" src="assets/images/resume_image_1.png" alt="" role="presentation"/>
               <div class="resume-top__right">
                 <div class="resume-top__header">
                   <button class="resume-top__download"><img src="assets/images/resume_download.png" alt="" role="presentation"/><span>Скачать<br> резюме</span>
@@ -112,9 +116,9 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </section>
             <div class="resume-block single-block-slider">
-              <div class="resume-description">
+              <section class="resume-description">
                 <div class="resume-description__item">
                   <div class="resume-description__main-head">
                     <h4 class="resume-description__title-main">Опыт работы
@@ -178,8 +182,8 @@
                     Рассматриваю предложения с оплатой по конкретным результатам работы. Возможность использования личного авто.
                   </p>
                 </div>
-              </div>
-              <div class="resume-info jsOpenContacts" id="sidebar-single">
+              </section>
+              <aside class="resume-info jsOpenContacts" id="sidebar-single">
                 <div class="single-vacancy-overlay jsHideContacts"></div>
                 <div class="sidebar-inner">
                   <button class="mobile-contacts sidebar-mobile-contacts jsShowContacts"><img src="assets/images/add-contact.svg" alt="" role="presentation"/>
@@ -199,7 +203,7 @@
                   <button class="resume-info__btn jsSendMessage">написать сообщение
                   </button><a class="resume-info__complain" href="#">Пожаловаться на<br>это резюме</a>
                 </div>
-              </div>
+              </aside>
             </div>
           </div>
           <div class="soc-sidebar" id="sidebar-vr">
@@ -389,7 +393,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <div class="modal-block jsModal">
         <div class="modal-overlay jsModalClose">
         </div>

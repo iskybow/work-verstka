@@ -3,8 +3,10 @@ mixin single-vacancy()
     +e('img')(src='assets/images/bg-dots.png' alt='').dots2
     +e.circle
     +b.container
-      +b('p').result-search Результаты поиска · Вакансии  в Донецке
-        +e('span') Менеджер по холодным звонкам
+      +b('ul').result-search
+        +e('li') Результаты поиска ·
+        +e('li') Вакансии  в Донецке ·
+        +e('li') Менеджер по холодным звонкам
       +b.single-block.single-block-slider
         +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
           +e('img')(src='assets/images/add-contact.svg' alt='')
@@ -19,7 +21,7 @@ mixin single-vacancy()
             +e('a')(href='#').city.d-flex.align-items-center.ml-auto.mt5.mb5
               +e('img').icon(src='assets/images/arr-place.png' alt='')
               span.ml5 Санкт-Петербург
-          +e('h3').head Менеджер по продажам (холодные звонки)
+          +e('h1').head Менеджер по продажам (холодные звонки)
           +e.price
             +e('span') 8000 руб.
             +e.soc
@@ -60,7 +62,7 @@ mixin single-vacancy()
             +e('p').conditions-text Предусмотрена 13-я зарплата.
             +e('p').conditions-text График работы: пн-пт, с 08:00—16:00, сб-вс выходной.
             +e('p').conditions-text Дружный молодой коллектив.
-        +e.right.sidebar-single.jsOpenContacts#sidebar-single
+        +e('aside').right.sidebar-single.jsOpenContacts#sidebar-single
           +b.single-vacancy-overlay.jsHideContacts
           +b.sidebar-inner
             +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts

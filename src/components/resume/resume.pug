@@ -1,5 +1,5 @@
 mixin resume()
-  +b('section').resume
+  +b('div').resume
     +e('img')(src='assets/images/bg-dots.png' alt='').dots2
     +e.circle
     .container.container-for-sidebar
@@ -17,7 +17,7 @@ mixin resume()
           +e.date
             +e('p') Резюме от
             +e('span') 6 марта 2019
-        +b.resume-top
+        +b('section').resume-top
           +e('img')(src='assets/images/resume_image_1.png' alt='').left
           +e.right
             +e.header
@@ -40,7 +40,7 @@ mixin resume()
                   +e('th') Город:
                   +e('td') Горловка
         +b.resume-block.single-block-slider
-          +b.resume-description
+          +b('section').resume-description
             +e.item
               +e.main-head
                 +e('h4').title-main Опыт работы
@@ -75,7 +75,7 @@ mixin resume()
               +e('p').text Здоровый образ жизни, спорт, самообучение, участие в обучающих программах и тренингах, основной приоритет
                 | в трудовой деятельности - увлеченность работой приносящей результат и самореализация. Готовность к проектам высокого уровня сложности .
                 | Рассматриваю предложения с оплатой по конкретным результатам работы. Возможность использования личного авто.
-          +b.resume-info.jsOpenContacts#sidebar-single
+          +b('aside').resume-info.jsOpenContacts#sidebar-single
             .single-vacancy-overlay.jsHideContacts
             .sidebar-inner
               +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts

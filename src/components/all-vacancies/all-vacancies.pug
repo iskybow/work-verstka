@@ -21,7 +21,7 @@ mixin all-vacancies()
               +e('option') 30 дней
         +b.v-content-bottom.container-for-sidebar
           +b.filter-overlay.jsFilterOverlay
-          +e.left.sidebar.jsOpenFilter#sidebar
+          +e('aside').left.sidebar.jsOpenFilter#sidebar
             +b.filter-close.jsHideFilter
               +e('span')
               +e('span')
@@ -137,27 +137,27 @@ mixin all-vacancies()
                   +e('input')(type='text')
                   +e('input')(type='text')
               +b('button').vl-btn.btn-card.btn-red Применить
-          +e.center
+          +e.center.scroll
             - for (var i = 0; i < 12; i++)
               +b.single-card
                 +e.tr
-                div
+                +e.header
                   a.btn-card.btn-card-small.btn-gray(href='#') Мода и стиль
-                +e('h3').title.mt5.mb0 Рюкзак из натуральной крокодильей кожи ...
+                  +e('img')(src='assets/images/logo_company.svg' alt='').image
+                +e('h3').title.mt5 Рюкзак из натуральной крокодильей кожи ...
                 +e.info-second
-                  span.mr10 Добавлено: 19 марта 2018, 17:15
+                  span Добавлено: 19 марта 2018, 17:15
                   +e.view
-                    +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
+                    +e('img').icon(src='assets/images/icon-eye.png' alt='')
                     span 255
-                  a.d-flex.align-items-center.ml-auto.mt5.mb5(href='#')
+                  a.d-flex.align-items-center.mt5.mb5(href='#')
                     +e('img').icon(src='assets/images/arr-place.png' alt='')
                     span.ml5 Санкт-Петербург
-                  +e('img')(src='assets/images/logo_company.svg' alt='').info-second__image
                 +e('span').price 260-400 EUR
                 +e.info
                   p Форму держит, на змейке внутри, носится как сумкой так и рюкзаком
                   p Цвет: чёрная
-                .d-flex.flex-wrap.align-items-center.mt-auto.justify-content-between
+                +e.bottom
                   +e.info__soc
                     +e('span') Написать соискателю в сетях
                     +b('a')(href='#').vk-bg
@@ -168,7 +168,7 @@ mixin all-vacancies()
                       +e('img')(src='assets/images/fb.svg' alt='')
                     +b('a')(href='#').inst-bg
                       +e('img')(src='assets/images/instagram.svg' alt='')
-                  a(href='single-vacancy.html').btn-card.btn-red.mt5.mb5.ml15 Посмотреть полностью
+                  a(href='single-vacancy.html').btn-card.btn-red Посмотреть полностью
           //+b.soc-sidebar#sidebar-vr
           //  .sidebar-inner
           //    +b('p').vr-head Прямой эфир

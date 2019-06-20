@@ -27,13 +27,10 @@
                   <!--+e('a').nav-item(href='all-resume.html') Поиск резюме-->
                   <button class="home__nav-item jsLogin">Вход
                   </button>
-                  <!--+b.dropdown.jsMenu-->
-                  <!--  +b('span').home__nav-item.jsOpenMenu User-->
-                  <!--    +b('span') >-->
-                  <!--  +e.menu.jsShowMenu-->
-                  <!--    +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад-->
-                  <!--    +b('a')(href='/personal-area').home__nav-item Личный кабинект-->
-                  <!--    +b('a')(href='/personal-area').home__nav-item Выйти-->
+                  <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User<span>></span></span>
+                    <div class="dropdown__menu jsShowMenu"><span class="nhome__nav-item mobile-prev jsMenuPrev">Назад</span><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
+                    </div>
+                  </div>
                 </nav>
                 <div class="home__main-email d-flex align-items-center"><span class="home__main-ico">@</span><a href="mailto:info@vendoram.ru">info@vendoram.ru</a>
                 </div>
@@ -226,7 +223,7 @@
                   </button>
                 </div>
               </div>
-              <div class="v-content-bottom__center">
+              <div class="v-content-bottom__center scroll">
                 <div class="single-card-resume">
                   <div class="single-card-resume__top"><img class="single-card-resume__left-img" src="assets/images/resume_image_1.png" alt="" role="presentation"/>
                     <div class="single-card-resume__top-left">

@@ -155,8 +155,29 @@
         width: 100%
         margin-left: 0
 
+      &__header
+        position: relative
+
+        & a
+          border-radius: 25px
+          font-size: 12px
+
+      &__image
+        position: absolute
+        top: -5px
+        right: 0
+        width: auto
+        max-width: 66px
+        max-height: 50px
+        min-height: 50px
+
       &__title
-        @media (max-width: 478px)
+        max-width: 400px
+        margin-bottom: 10px
+        color: #262626
+        font-size: 20px
+        font-weight: 700
+        @media (max-width: 530px)
           width: 83%
 
       &__info-second
@@ -166,38 +187,60 @@
           flex-direction: column
           align-items: flex-start
 
-        & a
-          margin-right: 90px
+        & > span
+          margin-right: 22px
+
+        & .single-card__view
+          margin-right: 22px
           @media (max-width: 478px)
             margin-left: 0 !important
 
-        &__image
-          position: absolute
-          bottom: 5px
-          right: 0
-          width: auto
-          max-width: 66px
-          max-height: 50px
-          min-height: 50px
-
       &__price
-        margin: 15px 0
+        margin: 18px 0
+        color: #dd3d34
+        font-family:  'Muller', sans-serif
+        font-size: 18px
         font-weight: 800
-        font-size: 17px
-        color: #0d1566
+        text-transform: uppercase
+
+      &__bottom
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        width: 100%
+
+        & > a
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 201px
+          height: 37px
+          margin-left: auto
+          color: #ffffff
+          font-weight: 700
+          font-size: 14px
+          border-radius: 19px
+          background-color: #dd3d34
+          @media (max-width: 500px)
+            margin-right: auto
 
       &__info
+        color: #262626
+
+        & p
+          line-height: 1.4
 
         &__soc
           display: flex
           align-items: center
+          margin: 20px 0
           @media (max-width: 380px)
             flex-wrap: wrap
 
           & span
             margin-right: 20px
-            font-weight: 500
-            color: #000104
+            font-weight: 700
+            color: #424da0
             @media (max-width: 768px)
               margin-right: 10px
             @media (max-width: 380px)
@@ -207,36 +250,16 @@
             display: flex
             align-items: center
             justify-content: center
-            width: 18px
-            height: 18px
+            width: 24px
+            height: 24px
             margin-right: 10px
             border-radius: 50%
             @media (max-width: 380px)
               margin: 10px 10px 10px 0
 
             & img
-              width: 11px
+              width: 15px
               height: auto
-
-      & .btn-card
-        position: relative
-        margin: 0 5px 5px 0
-        border-radius: 11px
-        @media (max-width: 577px)
-          margin-left: 0 !important
-
-        &:first-child:before
-          position: absolute
-          top: 0
-          left: -10px
-          content: ''
-          display: block
-          width: 1px
-          height: 24px
-          background-color: #ffe1df
-          @media (max-width: 577px)
-            display: none
-
 
 
 .vk-bg

@@ -27,13 +27,10 @@
                   <!--+e('a').nav-item(href='all-resume.html') Поиск резюме-->
                   <button class="home__nav-item jsLogin">Вход
                   </button>
-                  <!--+b.dropdown.jsMenu-->
-                  <!--  +b('span').home__nav-item.jsOpenMenu User-->
-                  <!--    +b('span') >-->
-                  <!--  +e.menu.jsShowMenu-->
-                  <!--    +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад-->
-                  <!--    +b('a')(href='/personal-area').home__nav-item Личный кабинект-->
-                  <!--    +b('a')(href='/personal-area').home__nav-item Выйти-->
+                  <div class="dropdown jsMenu"><span class="home__nav-item jsOpenMenu">User<span>></span></span>
+                    <div class="dropdown__menu jsShowMenu"><span class="nhome__nav-item mobile-prev jsMenuPrev">Назад</span><a class="home__nav-item" href="/personal-area">Личный кабинект</a><a class="home__nav-item" href="/personal-area">Выйти</a>
+                    </div>
+                  </div>
                 </nav>
                 <div class="home__main-email d-flex align-items-center"><span class="home__main-ico">@</span><a href="mailto:info@vendoram.ru">info@vendoram.ru</a>
                 </div>
@@ -75,7 +72,7 @@
           <div class="single-block single-block-slider">
             <button class="mobile-contacts jsShowContacts jsShowContactsFlag"><img src="assets/images/add-contact.svg" alt="" role="presentation"/>
             </button>
-            <div class="single-block__left">
+            <div class="single-block__left"><img class="single-block__logo" src="assets/images/logo_company.svg" alt="" role="presentation"/>
               <div class="single-block__first">
                 <div class="category-block"><a class="btn-card btn-card-small btn-gray" href="#">Администрация</a>
                 </div><span>Добавлено:<br> 19 марта 2018, 17:15</span>
@@ -156,22 +153,22 @@
                 <button class="mobile-contacts sidebar-mobile-contacts jsShowContacts"><img src="assets/images/add-contact.svg" alt="" role="presentation"/>
                 </button>
                 <div class="sr-block">
-                  <div class="sr-block__image"><img src="assets/images/logo_company.svg" alt="" role="presentation"/>
-                  </div>
-                  <div class="sr-block__text">
-                    <h3 class="sr-block__text__company">Компания:
-                    </h3>
-                    <p class="sr-block__text__c-name">Bernas Company
-                    </p>
-                    <p class="sr-block__text__c-name">Маркетинг, реклама
-                    </p>
-                    <h3 class="sr-block__text__contact">Контактное лицо:
-                    </h3>
-                    <p class="sr-block__text__cont-name">Юлия
-                    </p>
-                    <h3 class="sr-block__text__phone">Телефон:
-                    </h3><a class="sr-block__text__p-num" href="tel:0508798669">050-879-86-69</a><a class="sr-block__text__p-num" href="tel:0713406501">071-340-65-01</a>
-                  </div>
+                  <!--+e.image-->
+                  <!--  +e('img')(src='assets/images/logo_company.svg' alt='')-->
+                  <ul class="sr-block__text">
+                    <li class="sr-block__text__company">
+                      <p><strong>Компания:</strong>FMCG Товары народного потребления (FMCG), продукты питания
+                      </p>
+                    </li>
+                    <li class="sr-block__text__contact">
+                      <p><strong>Контактное лицо:</strong>Юлия
+                      </p>
+                    </li>
+                    <li class="sr-block__text__phone"><img src="assets/images/phone.svg" alt="" role="presentation"/>
+                      <div><strong>Телефон:</strong><a href="tel:0508798669">050-879-86-69</a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <div class="sr-btn">
                   <button class="sr-btn__btn btn btn-red jsVacancyModal">Отправить резюме
@@ -181,8 +178,72 @@
                   <p class="sr-btn__text">16 января 2019 в Донецке
                   </p>
                 </div>
+                <div class="last-vacancy pc-last-vacancy">
+                  <h2 class="last-vacancy__head">Последние вакансии
+                  </h2>
+                  <div class="last-vacancy__item">
+                    <div class="last-vacancy__tr">
+                    </div>
+                    <div class="last-vacancy__header"><img src="assets/images/rbc-logo.png" alt="" role="presentation"/>
+                      <div class="last-vacancy__top">
+                        <div class="last-vacancy__cat-city"><a class="btn-card btn-card-small btn-gray" href="#">Strategy Partners</a>
+                        </div><a class="last-vacancy__title" href="#" title="Дизайнер презентаций">Дизайнер презентаций</a>
+                      </div>
+                    </div>
+                    <div class="last-vacancy__info">
+                      <p>
+                        Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...</p>
+                    </div>
+                  </div>
+                  <div class="last-vacancy__item">
+                    <div class="last-vacancy__tr">
+                    </div>
+                    <div class="last-vacancy__header"><img src="assets/images/rbc-logo.png" alt="" role="presentation"/>
+                      <div class="last-vacancy__top">
+                        <div class="last-vacancy__cat-city"><a class="btn-card btn-card-small btn-gray" href="#">Strategy Partners</a>
+                        </div><a class="last-vacancy__title" href="#" title="Дизайнер презентаций">Дизайнер презентаций</a>
+                      </div>
+                    </div>
+                    <div class="last-vacancy__info">
+                      <p>
+                        Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </aside>
+            <div class="last-vacancy mob-last-vacancy">
+              <h2 class="last-vacancy__head">Последние вакансии
+              </h2>
+              <div class="last-vacancy__item">
+                <div class="last-vacancy__tr">
+                </div>
+                <div class="last-vacancy__header"><img src="assets/images/rbc-logo.png" alt="" role="presentation"/>
+                  <div class="last-vacancy__top">
+                    <div class="last-vacancy__cat-city"><a class="btn-card btn-card-small btn-gray" href="#">Strategy Partners</a>
+                    </div><a class="last-vacancy__title" href="#" title="Дизайнер презентаций">Дизайнер презентаций</a>
+                  </div>
+                </div>
+                <div class="last-vacancy__info">
+                  <p>
+                    Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...</p>
+                </div>
+              </div>
+              <div class="last-vacancy__item">
+                <div class="last-vacancy__tr">
+                </div>
+                <div class="last-vacancy__header"><img src="assets/images/rbc-logo.png" alt="" role="presentation"/>
+                  <div class="last-vacancy__top">
+                    <div class="last-vacancy__cat-city"><a class="btn-card btn-card-small btn-gray" href="#">Strategy Partners</a>
+                    </div><a class="last-vacancy__title" href="#" title="Дизайнер презентаций">Дизайнер презентаций</a>
+                  </div>
+                </div>
+                <div class="last-vacancy__info">
+                  <p>
+                    Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

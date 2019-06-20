@@ -11,6 +11,7 @@ mixin single-vacancy()
         +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
           +e('img')(src='assets/images/add-contact.svg' alt='')
         +e.left
+          +e('img')(src='assets/images/logo_company.svg' alt='').logo
           +e.first
             +b.category-block
               +b('a')(href='#').btn-card.btn-card-small.btn-gray Администрация
@@ -68,18 +69,75 @@ mixin single-vacancy()
             +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts
               +e('img')(src='assets/images/add-contact.svg' alt='')
             +b.sr-block
-              +e.image
-                +e('img')(src='assets/images/logo_company.svg' alt='')
-              +e.text
-                +e('h3').text__company Компания:
-                +e('p').text__c-name Bernas Company
-                +e('p').text__c-name Маркетинг, реклама
-                +e('h3').text__contact Контактное лицо:
-                +e('p').text__cont-name Юлия
-                +e('h3').text__phone Телефон:
-                +e('a')(href='tel:0508798669').text__p-num 050-879-86-69
-                +e('a')(href='tel:0713406501').text__p-num 071-340-65-01
+              //+e.image
+              //  +e('img')(src='assets/images/logo_company.svg' alt='')
+              +e('ul').text
+                +e('li').text__company
+                  +e('p')
+                    +e('strong') Компания:
+                    | FMCG Товары народного потребления (FMCG), продукты питания
+                +e('li').text__contact
+                  +e('p')
+                    +e('strong') Контактное лицо:
+                    | Юлия
+                +e('li').text__phone
+                  +e('img')(src='assets/images/phone.svg' alt='')
+                  div
+                    +e('strong') Телефон:
+                    +e('a')(href='tel:0508798669') 050-879-86-69
             +b.sr-btn
               +e('button').btn.btn.btn-red.jsVacancyModal Отправить резюме
               +e('p').text Вакансия опубликована
               +e('p').text 16 января 2019 в Донецке
+            +b.last-vacancy.pc-last-vacancy
+              +e('h2').head Последние вакансии
+              +e.item
+                +e.tr
+                +e.header
+                  +e('img')(src='assets/images/rbc-logo.png' alt='')
+                  +e.top
+                    +e.cat-city
+                      a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                    +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+                +e.info
+                  p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                    | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+              +e.item
+                +e.tr
+                +e.header
+                  +e('img')(src='assets/images/rbc-logo.png' alt='')
+                  +e.top
+                    +e.cat-city
+                      a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                    +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+                +e.info
+                  p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                    | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+        +b.last-vacancy.mob-last-vacancy
+          +e('h2').head Последние вакансии
+          +e.item
+            +e.tr
+            +e.header
+              +e('img')(src='assets/images/rbc-logo.png' alt='')
+              +e.top
+                +e.cat-city
+                  a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+            +e.info
+              p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+          +e.item
+            +e.tr
+            +e.header
+              +e('img')(src='assets/images/rbc-logo.png' alt='')
+              +e.top
+                +e.cat-city
+                  a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+            +e.info
+              p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...

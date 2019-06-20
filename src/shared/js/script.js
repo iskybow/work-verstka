@@ -141,8 +141,8 @@ $(document).ready(function () {
 
   if ($('#sidebar-single').length > 0 && window.innerWidth > 993) {
     let stickySidebar = new StickySidebar('#sidebar-single', {
-      topSpacing: 20,
-      bottomSpacing: 20,
+      topSpacing: 0,
+      bottomSpacing: 0,
       containerSelector: '.single-block-slider',
       innerWrapperSelector: '.sidebar-inner',
       resizeSensor: true
@@ -304,6 +304,14 @@ $(document).ready(function () {
     $('.jsShowMenu').removeClass('active-nav-drop');
     $('.jsNavOverlay').removeClass('active-filter-overlay').css('display', 'none')
   });
+
+  if(window.innerWidth < 575 && $('.scroll').length > 0) {
+    console.log($('.scroll'));
+    console.log(123);
+    $('html, body').animate({
+      scrollTop: $(".scroll").offset().top-50
+    }, 2000);
+  }
 
 });
 

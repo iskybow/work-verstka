@@ -46,12 +46,22 @@
     flex-direction: column
 
   &__left
+    position: relative
     display: flex
     flex-direction: column
     align-items: flex-start
     width: 100%
     padding: 20px
     background-color: #ffffff
+
+  &__logo
+    position: absolute
+    top: 15px
+    right: 15px
+    width: 80px
+    height: auto
+    @media (max-width: 1200px)
+      display: none
 
   &__first
     display: flex
@@ -232,7 +242,7 @@
     display: flex
     flex-direction: column
     align-items: center
-    min-width: 330px
+    min-width: 375px
     margin-left: 15px
     @media (max-width: 1200px)
       min-width: 250px
@@ -246,7 +256,7 @@
 
     & .sidebar-inner
       width: 100% !important
-      max-width: 330px
+      max-width: 375px
       @media (max-width: 1200px)
         max-width: 250px
       @media (max-width: 993px)
@@ -258,7 +268,7 @@
 .sr-block
   display: flex
   align-items: center
-  padding: 35px 30px 20px 10px
+  padding: 25px 35px 25px 35px
   background-color: #ffffff
   @media (max-width: 1200px)
     flex-direction: column
@@ -267,11 +277,6 @@
   @media (max-width: 993px)
     align-items: flex-start
     flex-direction: row
-  //@media (max-width: 767px)
-  //  flex-direction: row
-  //  justify-content: space-around
-  //@media (max-width: 376px)
-  //  flex-direction: column
 
   &__image
     width: 100px
@@ -292,70 +297,51 @@
     display: flex
     flex-direction: column
     align-items: flex-start
-    @media (max-width: 1200px)
-      align-items: center
-    @media (max-width: 993px)
-      align-items: stretch
-    //  justify-content: flex-start
-    //  flex-wrap: wrap
-    //  width: 100%
-    //  height: 70px
-    //@media (max-width: 767px)
-    //  width: auto
-    //  height: auto
-    //  align-items: flex-start
-    //@media (max-width: 376px)
-    //  align-items: center
+    padding: 0
+    list-style: none
 
     &__company
-      margin: 0
-      font-weight: 700
-      font-size: 18px
-      @media (max-width: 993px)
-        font-size: 17px
-
-    &__c-name
-      margin: 0
+      margin: 0 0 20px
       font-weight: 500
       font-size: 16px
-      @media (max-width: 993px)
-        font-size: 14px
+      & p
+        margin: 0
+      & strong
+        margin-right: 5px
+        font-size: 20px
 
     &__contact
-      margin: 20px 0 0
-      font-weight: 700
-      font-size: 18px
-      @media (max-width: 993px)
-        font-size: 17px
-      //@media (max-width: 767px)
-      //  margin-top: 20px
-
-    &__cont-name
-      margin: 0
+      margin: 0 0 20px
       font-weight: 500
       font-size: 16px
-      color: #182c93
-      @media (max-width: 993px)
-        font-size: 14px
-      //@media (max-width: 767px)
-      //  margin-bottom: 0
+      & p
+        margin: 0
+        color: #182c93
+      & strong
+        margin-right: 5px
+        font-size: 20px
+        color: #000000
 
     &__phone
-      margin: 20px 0 0
-      font-weight: 700
-      font-size: 18px
-      @media (max-width: 993px)
-        font-size: 17px
-      //@media (max-width: 767px)
-      //  margin-top: 20px
+      display: flex
+      align-items: center
 
-    &__p-num
-      font-weight: 700
-      font-size: 16px
-      color: #2e347a
-      text-decoration: none
-      @media (max-width: 993px)
-        font-size: 14px
+      & img
+        width: 24px
+        height: 24px
+        margin: 0 24px 0 11px
+
+      & > div
+        display: flex
+        flex-direction: column
+        font-size: 18px
+        color: #000000
+
+        & a
+          color: #2e347a
+          font-weight: 700
+          text-decoration: none
+
 
 .sr-btn
   display: flex
@@ -450,3 +436,76 @@
 
   & .btn-card
     margin-bottom: 5px
+
+.last-vacancy
+  display: flex
+  flex-direction: column
+
+  &__head
+    width: 100%
+    margin: 40px 0 35px
+    color: #000000
+    font-size: 22px
+    font-weight: 700
+    text-align: center
+
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin: 10px 0
+    padding: 20px
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+    background-color: #ffffff
+
+  &__header
+    display: flex
+    align-items: center
+    width: 100%
+
+    & > img
+      max-width: 70px
+      max-height: 70px
+      width: auto
+      height: auto
+      margin-right: 18px
+
+  &__cat-city
+    display: flex
+    align-items: center
+
+    & a:first-child
+      border-radius: 10px
+      text-align: center
+
+  &__title
+    display: block
+    width: 280px
+    margin: 15px 0 0
+    font-size: 14px
+    color: #2a2a2a
+    font-weight: 800
+    text-decoration: none
+    @media (max-width: 1500px)
+      width: 210px
+    @media (max-width: 1200px)
+      width: auto
+
+  &__info
+    margin: 15px 0 0
+    color: #2a2a2a
+    font-size: 13px
+    font-weight: 400
+
+    & p
+      margin: 0
+
+.pc-last-vacancy
+  @media (max-width: 992px)
+    display: none
+
+.mob-last-vacancy
+  display: none
+  @media (max-width: 992px)
+    display: flex

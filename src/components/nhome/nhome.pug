@@ -15,6 +15,7 @@ mixin nhome()
           +e('nav').nav.jsNavMenu
             +e('a').nav-item_logo(href='index.html')
               +e('img')(src='assets/images/logo-main.png')
+              +e('img')(src='assets/images/logo_mob.png')
             +e('a').nav-item(href='resume.html') Резюме
             +e('a').nav-item(href='all-resume.html') Поиск резюме
             +e('button').nav-item.nav-btn.jsLogin Вход
@@ -95,4 +96,4 @@ mixin nhome()
       +e('a').footer-item.mob-hide(href='#') Администрация, руководство среднего звена 23
       +e('a').footer-item(href='#') все категории
     +e('img').dots1(src='assets/images/bg-dots.png' alt='')
-    +e('img')(src='assets/images/circle.png' alt='').circle
+    +e('div').circle

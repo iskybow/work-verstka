@@ -73,11 +73,15 @@
       @media (max-width: 998px)
         flex-direction: column
         margin: 20px auto 0
+      @media (max-width: 700px)
+        margin-top: 0
       &-vacancy
         margin: 0 60px 0 25px
         color: #dd3d34
         font-size: 22px
         font-weight: 800
+        @media (max-width: 700px)
+          margin: 0
   &__main
     position: relative
     display: flex
@@ -190,8 +194,7 @@
         display: flex
         flex-direction: column
         align-items: center
-      @media (max-width: 375px)
-        height: 320px
+        height: 200px
       &-img
         position: absolute
         top: -47px
@@ -498,7 +501,7 @@
       height: auto !important
       margin: auto
     @media (max-width: 576px)
-      margin-bottom: 100px
+      margin-bottom: 20px
     &-item
       padding-right: 20px
       color: $blue
@@ -666,6 +669,7 @@
     width: 100%
     @media (max-width: 375px)
       flex-direction: column
+      align-items: flex-start
 
     & > img
       max-width: 70px
@@ -673,6 +677,8 @@
       width: auto
       height: auto
       margin-right: 18px
+      @media (max-width: 375px)
+        margin: 0 auto 10px
 
   & .single-card__cat-city
     display: flex
@@ -714,6 +720,9 @@
   & .single-card__like
     margin-left: 16px
 
+.home-card.slick-slide
+  height: 270px !important
+
 .home-card.slick-slide.slick-current.slick-active
   width: 96% !important
   margin-left: 10px !important
@@ -729,3 +738,13 @@
 @media (max-width: 1250px)
   .nhome__nav > .nhome__nav-item:nth-child(1)
     margin-top: 60px
+
+.desc-pc
+  display: block
+  @media (max-width: 575px)
+    display: none
+
+.desc-mob
+  display: none
+  @media (max-width: 575px)
+    display: block

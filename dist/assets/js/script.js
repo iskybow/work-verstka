@@ -69,8 +69,8 @@ if ($('.home__slider').length > 0) {
     prevArrow: '<button type="button" class="prevSlickHome"><img src="assets/images/arrow-down.svg"></button>',
     nextArrow: '<button type="button" class="nextSlickHome"><img src="assets/images/arrow-up.svg"></button>',
     slidesToShow: 3,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     responsive: [{
       breakpoint: 1500,
       settings: {
@@ -88,7 +88,7 @@ if ($('.home__slider').length > 0) {
       breakpoint: 576,
       settings: {
         arrows: false,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }]

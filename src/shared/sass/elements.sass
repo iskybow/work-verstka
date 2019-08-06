@@ -382,3 +382,216 @@
   display: none
   @media (max-width: 1250px)
     display: flex
+
+.card-icon
+  width: 8px
+  height: auto
+
+.new-card
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 650px
+  min-height: 210px
+  margin: 15px 10px
+  padding: 20px 20px 20px 30px
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+  background-color: #ffffff
+  @media (max-width: 992px)
+    width: 100%
+    margin: 15px 0
+
+  &__tr
+    position: absolute
+    bottom: 100%
+    left: 90px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    overflow: hidden
+
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      width: 50%
+      height: 50%
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+      background-color: #fff
+      transform: translateY(50%) rotate(45deg)
+
+  &__header
+    display: flex
+    align-items: center
+
+  &__city
+    display: flex
+    align-items: center
+    margin: 0 0 0 17px
+    color: #a6a6a6
+    font-size: 12px
+    font-weight: 500
+    letter-spacing: 0.64px
+    text-decoration: none
+
+  &__title
+    max-width: 380px
+    margin: 8px 0
+    color: #2a2a2a
+    font-size: 16px
+    font-weight: 800
+    line-height: 15px
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+
+    & img
+      width: 14px
+      height: auto
+      margin-left: 8px
+
+  &__info-second
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+    & > span
+      color: #a6a6a6
+      font-size: 12px
+      font-weight: 500
+      line-height: 12px
+
+  &__view
+    display: flex
+    align-items: center
+    margin-left: 13px
+
+    & > span
+      color: #a6a6a6
+      font-size: 12px
+      font-weight: 500
+      line-height: 12px
+      letter-spacing: 0.48px
+
+  &__info
+    position: relative
+    display: flex
+    align-items: center
+    margin-bottom: 23px
+
+    &-img
+      display: flex
+      justify-content: center
+      min-width: 45px
+      max-width: 45px
+      width: 100%
+      height: 45px
+      border-radius: 50%
+      overflow: hidden
+
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &-text
+      display: flex
+      flex-direction: column
+      margin-left: 40px
+
+      & p
+        margin: 0 0 9px
+        color: #2a2a2a
+        font-size: 12px
+        font-weight: 400
+        line-height: 12.75px
+
+      & span
+        margin: 0
+        color: #0d1566
+        font-size: 15px
+        font-weight: 800
+
+  &__buttons
+    display: flex
+    align-items: center
+    margin-bottom: 30px
+    @media (max-width: 992px)
+      flex-wrap: wrap
+    @media (max-width: 768px)
+      justify-content: space-between
+      margin-bottom: 10px
+
+    & .btn-favorites
+      margin: 0 20px 0 10px
+
+    & .btn-card, .btn-favorites, .btn-play
+      @media (max-width: 768px)
+        margin: 0 0 15px 0
+
+  &__reviews
+    position: relative
+    display: flex
+    flex-direction: column
+    margin-right: 30px
+    padding-left: 14px
+    @media (max-width: 768px)
+      margin-bottom: 15px
+
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      content: ''
+      display: block
+      width: 3px
+      height: 100%
+      border-radius: 2px
+      background-color: #fb553e
+
+    & p
+      margin: 0 0 3px
+      color: #0f0000
+      font-size: 11px
+      font-weight: 700
+
+    & span
+      color: #0f0000
+      font-size: 11px
+      font-weight: 500
+
+  &__soc
+    display: flex
+    align-items: center
+    @media (max-width: 380px)
+      flex-wrap: wrap
+
+    & span
+      margin-right: 20px
+      font-weight: 500
+      color: #000104
+      @media (max-width: 768px)
+        margin-right: 10px
+      @media (max-width: 380px)
+        width: 100%
+
+    & a
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 24px
+      height: 24px
+      margin-right: 10px
+      border-radius: 50%
+      @media (max-width: 380px)
+        margin: 10px 10px 10px 0
+
+      & img
+        width: 15px
+        height: auto
+
+.novelty
+  position: absolute
+  top: -30px

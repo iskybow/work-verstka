@@ -1,0 +1,85 @@
+mixin single-task()
+  +b.single-task
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots2
+    +e.circle
+    +b.container
+      +b('ul').result-search
+        +e('li') Результаты поиска ·
+        +e('li') Вакансии  в Донецке ·
+        +e('li') Менеджер по холодным звонкам
+      +b.stask-performers
+        +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
+          +e('img')(src='assets/images/add-contact.svg' alt='')
+        +b('section').stask-performers-left
+          +e.header
+            +b.category-block
+              +b('a')(href='#').btn-card.btn-card-small.btn-gray Администрация, руководство
+            +e('span') Добавлено:<br> 19 марта 2018, 17:15
+            +e.view
+              +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
+              span 255
+            +e('a')(href='#').city.d-flex.align-items-center.ml-auto.mt5.mb5
+              +e('img').icon(src='assets/images/arr-place.png' alt='')
+              span.ml5 Санкт-Петербург
+          +e('h3').title Прикрепить фасад шкафчика на кухне, приклеить кусок обоев 0,5х1,0м., Закрепить 2 дверных наличника в ванной
+          +e('span').price 8000  руб.
+          +e('hr').line
+          +e('p').time-start-head Когда нужно начать выполнение:
+          +e('p').time-start-data 13 июня 2019, 11:00.
+          +e('p').essence-head Суть задачи:
+          +e('p').essence-text Кусок обоев 0,5х1,2 м. Нужен клей для виниловых обоев. Для крепежа был использован какой то клей (не шурупы)
+          +b.task-slider.jsTaskSlider
+            +e('img')(src='assets/images/task_slider_img.png' alt='').slide
+            +e('img')(src='assets/images/task_slider_img.png' alt='').slide
+            +e('img')(src='assets/images/task_slider_img.png' alt='').slide
+            +e('img')(src='assets/images/task_slider_img.png' alt='').slide
+            +e('img')(src='assets/images/task_slider_img.png' alt='').slide
+            +e('img')(src='assets/images/task_slider_img.png' alt='').slide
+        +b('aside').stask-performers-right.single-block__right.sidebar-single.jsOpenContacts
+          .single-vacancy-overlay.jsHideContacts
+          .sidebar-inner
+            +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts
+              +e('img')(src='assets/images/add-contact.svg' alt='')
+            +e.top
+              +b('img')(src='assets/images/correct.svg' alt='').correct
+              +e.top-img
+                +e('img')(src='assets/images/resume_image_1.png' alt='')
+              +e.top-reviews
+                +e('p') Дмитрий
+                +e('span') Нет отзывов
+            +e.soc
+              +e('span') Написать соискателю в сетях
+              +b('a')(href='#').vk-bg
+                +e('img')(src='assets/images/vk.svg' alt='')
+              +b('a')(href='#').ok-bg
+                +e('img')(src='assets/images/ok.svg' alt='')
+              +b('a')(href='#').fb-bg
+                +e('img')(src='assets/images/fb.svg' alt='')
+              +b('a')(href='#').inst-bg
+                +e('img')(src='assets/images/instagram.svg' alt='')
+            +e.buttons
+              +e('button').buttons-btn.btn.btn-red.jsVacancyModal ПРЕДЛОЖИТЬ УСЛУГИ
+              +e('p').buttons-text Вакансия опубликована
+              +e('p').buttons-text 16 января 2019 в Донецке
+            +b.last-tasks.pc-last-tasks
+              +e('h2') Последние задания
+              +e.item
+                +e('a')(href='#') Заложить кирпичом проемы и вставить окно
+                +e('span') Алексей | Цена договорная
+              +e.item
+                +e('a')(href='#') Заложить кирпичом проемы и вставить
+                +e('span') Алексей | Цена договорная
+              +e.item
+                +e('a')(href='#') Заложить кирпичом проемы и вставить окно вставить окно вставить окно вставить окно
+                +e('span') Алексей | Цена договорная
+        +b.last-tasks.mob-last-tasks
+          +e('h2') Последние задания
+          +e.item
+            +e('a')(href='#') Заложить кирпичом проемы и вставить окно
+            +e('span') Алексей | Цена договорная
+          +e.item
+            +e('a')(href='#') Заложить кирпичом проемы и вставить
+            +e('span') Алексей | Цена договорная
+          +e.item
+            +e('a')(href='#') Заложить кирпичом проемы и вставить окно вставить окно вставить окно вставить окно
+            +e('span') Алексей | Цена договорная

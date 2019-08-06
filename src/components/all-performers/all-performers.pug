@@ -1,0 +1,141 @@
+mixin all-performers()
+  +b('section').all-block.all-performers
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots2
+    +e.circle
+    +e.content
+      +b('button').filter-btn.jsShowFilter Фильтр
+      +b.container
+        +b.v-content-top
+          +b.vacancies-days
+            +e('p').text Выбирайте проверенных специалистов
+        +b.v-content-bottom.container-for-sidebar
+          +b.filter-overlay.jsFilterOverlay
+          +e('aside').left.sidebar.jsOpenFilter#sidebar
+            +b.filter-close.jsHideFilter
+              +e('span')
+              +e('span')
+            +b.sidebar-inner
+              +b.vl-block
+                +e.head.jsOpenCheck
+                  +e('p') Категория
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.check.jsCheckBlock
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Black
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Brawn
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Blue
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Grey
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Khaki
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Navy
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Orange
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Purple
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Red
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Black
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Brawn
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Blue
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Grey
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Khaki
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Navy
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Orange
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Purple
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Red
+              +b.vl-block
+                +e.head.jsOpenCheck
+                  +e('p') Статус
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.check.jsCheckBlock
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text С отзывами
+                  +b('label').checkbox
+                    +b('input')(type='checkbox')
+                    +b('div').checkbox__text Только проверенные
+              +b.vl-block.no-border
+                +e.head.jsOpenCheck
+                  +e('p') Бюджет
+                  +b('span').jsBtnPlus +
+                  +b('span').jsBtnMinus.btn-active -
+                +e.inputs.jsCheckBlock
+                  +e('input')(type='text')
+                  +e('input')(type='text')
+              +b('button').vl-btn.btn-card.btn-red Применить
+          +e.center.scroll
+            - for (var i = 0; i < 12; i++)
+              +b.new-card
+                +e.tr
+                +e.header
+                  a.btn-card.btn-card-small.btn-gray(href='#') Мода и стиль
+                  +e('a')(href='#').city
+                    +b('img').card-icon(src='assets/images/arr-place.png' alt='')
+                    span.ml5 Санкт-Петербург
+                +e('h3').title Диденко Станислав
+                  +e('img')(src='assets/images/correct.svg' alt='')
+                +e.info-second
+                  span Добавлено: 19 марта 2018, 17:15
+                  +e.view
+                    +b('img').card-icon(src='assets/images/icon-eye.png' alt='')
+                    span.ml5 255
+                +e.info
+                  +e.info-img
+                    +e('img')(src='assets/images/resume_image_1.png' alt='')
+                  +e.info-text
+                    p Готов предложить Вам услуги пешего курьера. Осуществим срочную и своевременную доставку. В штате опытные, и проверенные курьеры.
+                    span 700 РУБ / час
+                +e.buttons
+                  +e.reviews
+                    +e('p') Выполнено 2867 заданий
+                    +e('span') Нет отзывов
+                  a(href='single-vacancy.html').btn-card.btn-red Откликнуться
+                  button.btn-favorites
+                    img(src='assets/images/like2.svg' alt='')
+                    | В избранное
+                  button.btn-play
+                    img(src='assets/images/play.svg' alt='')
+                    | Видеодополнение
+                +e.soc
+                  +e('span') Написать соискателю в сетях
+                  +b('a')(href='#').vk-bg
+                    +e('img')(src='assets/images/vk.svg' alt='')
+                  +b('a')(href='#').ok-bg
+                    +e('img')(src='assets/images/ok.svg' alt='')
+                  +b('a')(href='#').fb-bg
+                    +e('img')(src='assets/images/fb.svg' alt='')
+                  +b('a')(href='#').inst-bg
+                    +e('img')(src='assets/images/instagram.svg' alt='')

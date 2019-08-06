@@ -89,7 +89,7 @@ if ($('.home__slider').length > 0) {
         breakpoint: 576,
         settings: {
           arrows: false,
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         }
       }
@@ -306,11 +306,36 @@ $(document).ready(function () {
   });
 
   if(window.innerWidth < 575 && $('.scroll').length > 0) {
-    console.log($('.scroll'));
-    console.log(123);
     $('html, body').animate({
       scrollTop: $(".scroll").offset().top-50
     }, 2000);
+  }
+
+  if ($('.jsTaskSlider').length > 0) {
+    $('.jsTaskSlider').slick({
+      arrows: true,
+      prevArrow: '<button type="button" class="prevTask"><img src="assets/images/arrow-up.svg"></button>',
+      nextArrow: '<button type="button" class="nextTask"><img src="assets/images/arrow-up.svg"></button>',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+    });
   }
 
 });

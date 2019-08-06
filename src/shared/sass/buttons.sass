@@ -40,6 +40,7 @@
   &-gray
     color: #ffffff
     background-color: $gray
+    border-radius: 10px
     &:hover
       color: #ffffff
       background-color: darken($gray, 20)
@@ -93,3 +94,42 @@
       position: absolute
       margin: 0
       transform: rotate(-45deg)
+
+.btn-favorites
+  display: flex
+  align-items: center
+  padding: 0
+  color: #a6a6a6
+  font-size: 11px
+  font-weight: 500
+  letter-spacing: 0.53px
+  background: none
+  border: none
+  outline: none
+  cursor: pointer
+
+  & img
+    width: 14px
+    height: auto
+    margin-right: 5px
+
+  &:hover
+    color: inherit
+
+.btn-play
+  display: flex
+  align-items: center
+  padding: 0
+  color: #000000
+  font-size: 11px
+  font-weight: 500
+  letter-spacing: 0.53px
+  background: none
+  border: none
+  outline: none
+  cursor: pointer
+
+  & img
+    width: 22px
+    height: auto
+    margin-right: 8px

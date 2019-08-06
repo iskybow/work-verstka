@@ -1,0 +1,370 @@
+.single-task
+  position: relative
+  padding-bottom: 100px
+  background-color: #f8f8f8
+
+  &__dots2
+    position: absolute
+    bottom: 0
+    left: 70px
+    @media (max-width: 769px)
+      display: none
+
+  &__circle
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 200px
+    height: 200px
+    background-color: #dd3d34
+    border-radius: 0 100% 0 0 / 100% 100% 0 0
+    z-index: 2
+    @media (max-width: 769px)
+      width: 100px
+      height: 100px
+
+.stask-performers
+  position: relative
+  display: flex
+  width: 100%
+  z-index: 2
+
+  @media (max-width: 992px)
+    flex-direction: column
+    align-items: center
+
+.stask-performers-left
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin-right: 15px
+  padding: 20px 80px 20px 30px
+  background-color: #ffffff
+
+  @media (max-width: 992px)
+    margin-right: 0
+    padding: 15px
+
+  &__header
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+
+    @media (max-width: 575px)
+      flex-direction: column
+      align-items: flex-start
+
+      & .stask-left__city
+        margin-left: 0 !important
+
+      & .stask-left__view
+        width: auto !important
+        margin-left: 0
+        margin-bottom: 10px
+
+    & > span
+      margin-left: 45px
+      color: #a8a8a8
+      letter-spacing: 0.33px
+      font-size: 10px
+      font-weight: 500
+      @media (max-width: 769px)
+        margin-left: 20px
+      @media (max-width: 575px)
+        width: auto
+        margin-top: 10px
+        margin-bottom: 10px
+        margin-left: 0
+
+      & br
+        display: none
+        @media (max-width: 769px)
+          display: block
+
+  &__view
+    display: flex
+    align-items: center
+    margin: 5px 15px 5px 10px
+    @media (max-width: 769px)
+      margin-right: 30px
+    @media (max-width: 575px)
+      margin: 10px 0 0
+
+    & span
+      color: #a8a8a8
+      letter-spacing: 0.33px
+      font-size: 10px
+      font-weight: 500
+
+  &__city
+    color: #a8a8a8
+    letter-spacing: 0.33px
+    font-size: 10px
+    font-weight: 500
+    text-decoration: none
+    white-space: nowrap
+    @media (max-width: 575px)
+      margin: 10px 0 0 !important
+
+  &__title
+    margin: 0 0 17px
+    color: #000000
+    font-size: 22px
+    font-weight: 700
+
+  &__price
+    margin: 0 0 13px
+    color: #0d1566
+    font-size: 26px
+    font-weight: 800
+
+  &__line
+    margin: 0 0 28px
+    width: 100%
+    height: 1px
+    background-color: #fb553e
+    opacity: 0.16
+    border: none
+
+  &__time-start-head
+    margin: 0 0 20px
+    color: #000000
+    font-size: 18px
+    font-weight: 700
+
+  &__time-start-data
+    margin: 0 0 27px
+    color: #000000
+    font-size: 14px
+    font-weight: 500
+
+  &__essence-head
+    margin: 0 0 20px
+    color: #000000
+    font-size: 18px
+    font-weight: 700
+
+  &__essence-text
+    margin: 0 0 17px
+    color: #000000
+    font-size: 14px
+    font-weight: 500
+
+.task-slider
+  position: relative
+  width: 510px
+
+  @media (max-width: 992px)
+    width: 335px
+
+  @media (max-width: 575px)
+    width: 165px
+
+  &__slide
+    width: 160px
+    height: 120px
+    margin-right: 10px
+
+  & .nextTask
+    position: absolute
+    right: -81px
+    top: 27px
+    width: 28px
+    height: auto
+    padding: 0
+    border: none
+    background: none
+    outline: none
+    cursor: pointer
+
+  & .prevTask
+    position: absolute
+    right: -60px
+    top: 52px
+    width: 28px
+    height: auto
+    padding: 0
+    border: none
+    background: none
+    outline: none
+    cursor: pointer
+    transform: rotate(180deg)
+
+.stask-performers-right
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 360px
+  min-width: 360px !important
+  width: 100%
+  margin-left: 0 !important
+
+  @media (max-width: 992px)
+    max-width: 250px
+    min-width: 250px !important
+    width: 100%
+
+  & .sidebar-inner
+    @media (max-width: 992px)
+      padding: 15px
+      background-color: #ffffff
+
+  &__top
+    position: relative
+    display: flex
+    align-items: center
+    width: 100%
+    padding: 25px 16px
+    background-color: #ffffff
+
+    & .correct
+      position: absolute
+      top: 15px
+      left: 60px
+      width: 12px
+      height: auto
+
+    &-img
+      display: flex
+      justify-content: center
+      min-width: 45px
+      max-width: 45px
+      width: 100%
+      height: 45px
+      border-radius: 50%
+      overflow: hidden
+
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &-reviews
+      position: relative
+      display: flex
+      flex-direction: column
+      margin-left: 36px
+      padding-left: 14px
+      @media (max-width: 768px)
+        margin-bottom: 15px
+
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        display: block
+        width: 3px
+        height: 100%
+        border-radius: 2px
+        background-color: #fb553e
+
+      & p
+        margin: 0 0 3px
+        color: #0f0000
+        font-size: 13px
+        font-weight: 700
+
+      & span
+        color: #0f0000
+        font-size: 13px
+        font-weight: 500
+
+  &__soc
+    display: flex
+    align-items: center
+    margin-top: 15px
+    @media (max-width: 1200px)
+      flex-wrap: wrap
+    @media (max-width: 992px)
+      margin-bottom: 15px
+
+    & span
+      margin-right: 20px
+      font-weight: 500
+      color: #000104
+      @media (max-width: 1200px)
+        width: 100%
+        margin-bottom: 10px
+
+    & a
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 24px
+      height: 24px
+      margin-right: 10px
+      border-radius: 50%
+      @media (max-width: 380px)
+        margin: 10px 10px 10px 0
+
+      & img
+        width: 15px
+        height: auto
+
+  &__buttons
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    margin-top: 26px
+    @media (max-width: 993px)
+      margin-top: 0
+      padding-bottom: 20px
+      background-color: #ffffff
+
+    &-btn
+      margin-bottom: 20px
+      border: none
+      cursor: pointer
+
+    &-text
+      margin: 0
+      font-weight: 500
+      font-size: 12px
+
+.last-tasks
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+
+  & h2
+    margin: 36px 0
+    color: #000000
+    font-size: 22px
+    font-weight: 700
+
+  &__item
+    display: flex
+    flex-direction: column
+    width: 260px
+    margin-bottom: 15px
+
+    &:last-child
+      margin-bottom: 0
+
+    & a
+      margin: 0
+      color: #000000
+      font-size: 12px
+      font-weight: 700
+      text-decoration: underline
+
+    & span
+      color: #000000
+      font-size: 12px
+      font-weight: 500
+
+.pc-last-tasks
+  display: flex
+  @media (max-width: 992px)
+    display: none
+
+.mob-last-tasks
+  display: none
+  @media (max-width: 992px)
+    display: flex
+    width: auto
+    padding: 20px
+    background-color: #f8f8f8

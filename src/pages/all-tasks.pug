@@ -1,0 +1,10 @@
+extends ../components/layout-default/layout-index
+include ../components/header/header
+include ../components/all-tasks/all-tasks
+
+block head
+  - var pageTitle = 'Index Page';
+
+block content
+  +header()
+  +all-tasks()

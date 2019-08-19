@@ -18,14 +18,15 @@ mixin nhome()
               +e('img')(src='assets/images/logo_mob.png')
             +e('a').nav-item(href='resume.html') Резюме
             +e('a').nav-item(href='all-resume.html') Поиск резюме
-            +e('button').nav-item.nav-btn.jsLogin Вход
-        //    +b.dropdown.jsMenu
-        //      +b('span').nhome__nav-item.nav-btn.jsOpenMenu Никита Лисовский
-        //        +b('span') >
-        //      +e.menu.jsShowMenu
-        //        +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад
-        //        +b('a')(href='/personal-area').nhome__nav-item Личный кабинект
-        //        +b('a')(href='/personal-area').nhome__nav-item Выйти
+            //+e('button').nav-item.nav-btn.jsLogin Вход
+            +b.dropdown.jsMenu
+              +b('span').nhome__nav-item.nav-btn.jsOpenMenu Никита Лисовский
+                +e('img')(src='assets/images/down-arrow.svg' alt='')
+                +b('span') >
+              +e.menu.jsShowMenu
+                +b('span').nhome__nav-item.mobile-prev.jsMenuPrev Назад
+                +b('a')(href='/personal-area').nhome__nav-item Личный кабинект
+                +b('a')(href='/personal-area').nhome__nav-item Выйти
         +e.main-content
           +e('form').form
             +e('span').form-text Сейчас на сайте свыше <span class='white-text'> 2398 вакансий </span> и <span class='white-text'> 3483 резюме</span>

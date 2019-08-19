@@ -262,16 +262,27 @@
 
 .dropdown
   position: relative
+  height: 22px
   @media (max-width: 1250px)
     width: 100%
+    height: auto
 
   & > span
+    display: flex
+    align-items: center
     padding-bottom: 15px
     & > span
       display: none
       @media (max-width: 1250px)
         display: block
         margin-left: 10px
+
+  & > .home__nav-item > img, > .nhome__nav-item > img
+    width: 15px
+    height: auto
+    margin-left: 10px
+    @media (max-width: 1250px)
+      display: none
 
   &__menu
     position: absolute

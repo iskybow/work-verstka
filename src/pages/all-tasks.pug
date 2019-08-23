@@ -1,6 +1,7 @@
 extends ../components/layout-default/layout-index
 include ../components/header/header
 include ../components/all-tasks/all-tasks
+include ../components/footer/footer
 
 block head
   - var pageTitle = 'Index Page';
@@ -8,3 +9,4 @@ block head
 block content
   +header()
   +all-tasks()
+  +footer()

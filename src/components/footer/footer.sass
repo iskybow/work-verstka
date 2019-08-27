@@ -5,8 +5,11 @@
   bottom: 0
   left: 55%
   margin: 1em
-  @media (max-width: 699px)
-    left: 48%
+  @media (max-width: 993px)
+    left: 30%
+    bottom: 59px
+    width: 30%
+    display: block
 
   &__craft-link
     text-decoration: none
@@ -14,6 +17,10 @@
     font-size: 12px
     padding-left: 25px
     margin-left: 5px
+    @media (max-width: 699px)
+      display: block
+      line-height: 0.9
+
 
     &:before
       content: ""
@@ -25,5 +32,5 @@
       background: url('../images/craft-red.png') no-repeat 50%
       -webkit-background-size: contain
       background-size: contain
-    @media (max-width: 699 px)
+    @media (max-width: 993px)
       font-size: 10px

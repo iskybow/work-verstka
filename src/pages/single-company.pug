@@ -1,0 +1,11 @@
+extends ../components/layout-default/layout-index
+include ../components/header/header
+include ../components/single-company/single-company
+include ../components/footer/footer
+
+block head
+  - var pageTitle = 'Single company';
+
+block content
+  +header()
+  +single-company()

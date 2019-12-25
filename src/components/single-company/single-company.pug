@@ -1,0 +1,130 @@
+mixin single-company()
+  +b.single-company
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots2
+    +e('img')(src='assets/images/bg-dots.png' alt='').dots
+    +e('img')(src='assets/images/bg_round.png' alt='')#round-left
+    +e('img')(src='assets/images/bg_round.png' alt='')#round-right
+    //+e.circle
+    +b.container
+      +b('ul').result-search
+        +e('li') Результаты поиска ·
+        +e('li') Вакансии  в Донецке ·
+        +e('li') Менеджер по холодным звонкамс
+      +b.single-block.single-block-slider
+        +b('button').mobile-contacts.jsShowContacts.jsShowContactsFlag
+          +e('img')(src='assets/images/add-contact.svg' alt='')
+        +e.left
+          //+e('img')(src='assets/images/logo_company.svg' alt='').logo
+          +e.first
+            +b.category-block
+              //+b('a')(href='#').btn-card.btn-card-small.btn-gray Администрация, руководство
+              +b('a')(href='#').btn-card.btn-card-small.btn-gray Мода и стиль
+              //+b('a')(href='#').btn-card.btn-card-small.btn-gray Гостинично-русторанный бизнес
+            +e('span') Добавлено:<br> 19 марта 2018, 17:15
+            +e.view
+              +e('img').icon.mr5(src='assets/images/icon-eye.png' alt='')
+              span 255
+            +e('a')(href='#').city.d-flex.align-items-center.ml-auto.mt5.mb5
+              +e('img').icon(src='assets/images/arr-place.png' alt='')
+              span.ml5 Санкт-Петербург
+          +b.content-part
+            +e.block
+              +e('p').title Comfy
+                +e('img')(src='assets/images/correct.png' alt='')#small-img
+              +e('img')(src='assets/images/comfy-logo-new.png' alt='').logo
+              +b.vacancies
+                +e('img')(src='assets/images/vertical_line.png' alt='').img
+                +e('p').title Менеджер по персоналу
+                +e('a')(href="#").active 1 активная вакансия
+            +e.block
+              +e('p').title Проверенная компания
+              +b.central
+                  +e('img')(src='assets/images/chip.png' alt='')
+                  +e('span') Розничная торговля
+            +e.block
+              +e('img')(src='assets/images/new_item.png' alt='').new
+              +b.right
+                +e('img')(src='assets/images/play-button.png' alt='')
+                +e('span') Вы можете записать свое видео резюме онлайн
+          +e('hr').hr
+          +b.description
+            +e('h3') О компании:
+            +e('p') Сеть COMFY — первый мультиканальный ритейлер бытовой техники и электроники в Украине.
+                    | Компания-лидер с глубокими ценностями, смелыми амбициями и самой сильной командой в отрасли.
+            +e('p') Сегодня COMFY объединяет 3000 сотрудников в 59 городах Украины. Персонал — главная ценность и
+                    |  гордость компании. Каждый сотрудник для COMFY — как лучший гаджет Apple для Стива Джобса. 90%
+                    |  менеджмента выросли внутри компании. И для каждого в команде COMFY есть возможность
+                    |  реализации амбиций и карьерного роста.
+
+        +e('aside').right.sidebar-single.jsOpenContacts#sidebar-single
+          +b.single-vacancy-overlay.jsHideContacts
+          +b.sidebar-inner
+            +e.call-contact
+              +e('img')(src='assets/images/vertical_line.png' alt='').img
+              +e('p').title Менеджер по персоналу
+              +e('p').phone-number 071 358 74 45
+            +b.single-block__soc
+              +e('span') Написать соискателю в сетях
+              +b('a')(href='#').vk-bg
+                +e('img')(src='assets/images/vk.svg' alt='')
+              +b('a')(href='#').ok-bg
+                +e('img')(src='assets/images/ok.svg' alt='')
+              +b('a')(href='#').fb-bg
+                +e('img')(src='assets/images/fb.svg' alt='')
+            +b('button').mobile-contacts.sidebar-mobile-contacts.jsShowContacts
+              +e('img')(src='assets/images/add-contact.svg' alt='')
+            +b.sr-btn
+              +e('button').btn.btn.btn-red.jsVacancyModal Хочу тут работать
+              +e('p').text На сйте
+              +e('p').text с 6 января 2019 г.
+            +b.last-vacancy.pc-last-vacancy
+              +e('h2').head Вакансии компании
+              +e.item
+                +e.tr
+                +e.header
+                  +e('img')(src='assets/images/rbc-logo.png' alt='')
+                  +e.top
+                    +e.cat-city
+                      a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                    +e('a')(href='#' title='Дизайнер презентаций').title Промоутер для работы в ТЦ "Континент"
+                +e.info
+                  p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                    | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+              +e.item
+                +e.tr
+                +e.header
+                  +e('img')(src='assets/images/rbc-logo.png' alt='')
+                  +e.top
+                    +e.cat-city
+                      a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                    +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+                +e.info
+                  p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                    | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+        +b.last-vacancy.mob-last-vacancy
+          +e('h2').head Последние вакансии
+          +e.item
+            +e.tr
+            +e.header
+              +e('img')(src='assets/images/rbc-logo.png' alt='')
+              +e.top
+                +e.cat-city
+                  a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+            +e.info
+              p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...
+          +e.item
+            +e.tr
+            +e.header
+              +e('img')(src='assets/images/rbc-logo.png' alt='')
+              +e.top
+                +e.cat-city
+                  a.btn-card.btn-card-small.btn-gray(href='#') Strategy Partners
+                +e('a')(href='#' title='Дизайнер презентаций').title Дизайнер презентаций
+
+            +e.info
+              p Полная занятость, неполная занятость, удаленная работа, готовы взять студента. Высшее образование.
+                | Strategy partners - международная компания, занимающаяся стрстегическим консалтингом, расширяет свою команду...

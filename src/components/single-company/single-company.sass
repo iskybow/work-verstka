@@ -1,0 +1,173 @@
+.single-company
+  display: block
+  overflow: hidden
+  position: relative
+
+.single-company__dots2
+  position: absolute
+  left: 67px
+  bottom: -100px
+
+.sidebar-inner__call-contact
+  display: flex
+  flex-direction: column
+  position: relative
+  width: 80%
+  margin: auto
+
+.sidebar-inner__img
+  position: absolute
+  left: 0
+  top: 10%
+
+.sidebar-inner__title
+  padding-left: 13px
+  margin: 0
+  font-size: 14px
+  font-weight: bolder
+
+.sidebar-inner__phone-number
+  padding-left: 13px
+  //margin: 7px 0 0 0
+  margin: 0
+  color: #0d1566
+  font-size: 23px
+  font-weight: 700
+
+.pc-last-vacancy .last-vacancy__head
+  margin: 40px 0 20px
+
+.single-block__soc
+  justify-content: center
+  margin-top: 40px
+
+.content-part__title
+  display: flex
+  align-items: baseline
+
+.content-part
+  display: flex
+  width: 100%
+
+.content-part__block
+  flex: 1 0 calc(100% / 3)
+  align-items: center
+  justify-content: center
+
+.vacancies
+  position: relative
+  margin-top: 20px
+
+.vacancies__img
+  position: absolute
+  left: 0
+  top: 10%
+
+.vacancies__title
+  padding-left: 20px
+  margin: 10px 0 5px 0
+  font-size: 14px
+  font-weight: bolder
+
+.vacancies__active
+  padding-left: 20px
+  font-weight: bolder
+
+.content-part .content-part__block:nth-child(2)
+  display: flex
+  flex-direction: column
+
+.content-part .content-part__block:nth-child(2) .content-part__title
+  padding-left: 10px
+
+.content-part__new
+  margin-bottom: 10px
+
+.central
+  display: flex
+
+.central img, .central span
+  padding-left: 13px
+
+.content-part .content-part__block:nth-child(3)
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.right
+  display: flex
+  align-items: center
+
+.right img, .right span
+  padding-left: 13px
+
+.single-block__hr
+  margin-top: 30px
+  width: 100%
+  height: 1px
+  background-color: #fb553e
+  opacity: 0.16
+
+.content-part .content-part__block:nth-child(1) .content-part__title
+  font-size: 22px
+
+#small-img
+  margin-left: 13px
+
+#round-left
+  position: absolute
+  left: -267px
+  bottom: -464px
+
+#round-right
+  position: absolute
+  right: -379px
+  top: -289px
+
+.single-company__dots
+  position: absolute
+  top: -100px
+  right: 30px
+
+@media (max-width: 993px)
+  .sidebar-inner
+    background-color: white
+
+  .single-block__soc
+    margin: 20px 0
+
+  .sidebar-inner__call-contact
+    width: 70%
+    margin-top: 20px
+
+  .single-block__soc span
+    text-align: center
+
+@media (max-width: 768px)
+  .content-part
+    display: flex
+    flex-wrap: wrap
+
+  .content-part__block:nth-child(1)
+    flex: 1 0 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .content-part__block:nth-child(2), .content-part__block:nth-child(3)
+    flex: 1 0 50%
+
+@media (max-width: 600px)
+  #round-right, .single-company__dots
+    display: none
+
+@media (max-width: 450px)
+  .content-part__block:nth-child(2), .content-part__block:nth-child(3)
+    flex: 1 0 100%
+
+  .right
+    width: 60%
+
+@media (max-width: 376px)
+  .right
+    width: 80%

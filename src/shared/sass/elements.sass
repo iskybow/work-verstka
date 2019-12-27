@@ -358,9 +358,17 @@
     left: 90px
   @media (max-width: 1100px)
     left: 160px
+  @media (max-width: 575px)
+    bottom: auto
+    top: -41px
+    left: 0
+    z-index: 100
 
   & img
     transform: rotate(90deg)
+
+    @media (max-width: 575px)
+      transform: rotate(180deg)
 
 .nextSlickHome
   position: absolute
@@ -379,9 +387,18 @@
     left: 135px
   @media (max-width: 1100px)
     left: 205px
+  @media (max-width: 575px)
+    bottom: auto
+    top: -41px
+    right: 0
+    left: auto
+    z-index: 100
 
   & img
     transform: rotate(-90deg)
+
+    @media (max-width: 575px)
+      transform: rotate(0)
 
 .mob-hide
   @media (max-width: 1200px)
